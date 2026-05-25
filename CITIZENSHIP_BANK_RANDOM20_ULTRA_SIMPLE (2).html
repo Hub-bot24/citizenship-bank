@@ -1,0 +1,4424 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Citizenship Quiz</title>
+<style>
+body {
+ font-family: Arial;
+ max-width: 900px;
+ margin: auto;
+ padding: 20px;
+}
+.question {
+ border:1px solid #ccc;
+ border-radius:10px;
+ padding:15px;
+ margin-bottom:15px;
+}
+button {
+ padding:12px 18px;
+ margin:5px;
+ font-size:16px;
+ border:none;
+ border-radius:8px;
+ color:white;
+ cursor:pointer;
+}
+#randomBtn {background:#0066cc;}
+#showBtn {background:#444;}
+#markBtn {background:#009245;}
+.correct {
+ outline:3px solid green;
+}
+.wrong {
+ outline:3px solid red;
+}
+</style>
+</head>
+<body>
+
+<h1>Australian Citizenship Quiz Bank</h1>
+
+<button id="randomBtn">🎲 Random 20</button>
+<button id="markBtn">✅ Mark Test</button>
+<button id="showBtn">📚 Show All</button>
+
+<div id="score"></div>
+
+<div id="questions">
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>1. What does freedom of association mean?</h3>
+<label class="option">
+<input class="wrong" name="q1" type="radio"/>
+<span>A) Everyone must join one party</span>
+</label>
+<label class="option">
+<input class="correct" name="q1" type="radio"/>
+<span>B) People can join lawful groups and organisations</span>
+</label>
+<label class="option">
+<input class="wrong" name="q1" type="radio"/>
+<span>C) Groups are illegal</span>
+</label>
+<div class="feedback">Correct answer: A — People may associate within the law.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>2. Can Australian citizens apply for an Australian passport?</h3>
+<label class="option">
+<input class="wrong" name="q2" type="radio"/>
+<span>A) Only if born in Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q2" type="radio"/>
+<span>B) No</span>
+</label>
+<label class="option">
+<input class="correct" name="q2" type="radio"/>
+<span>C) Yes</span>
+</label>
+<div class="feedback">Correct answer: C — Citizens can apply for an Australian passport.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>3. Which arm of government makes laws?</h3>
+<label class="option">
+<input class="correct" name="q3" type="radio"/>
+<span>A) Legislative</span>
+</label>
+<label class="option">
+<input class="wrong" name="q3" type="radio"/>
+<span>B) Executive</span>
+</label>
+<label class="option">
+<input class="wrong" name="q3" type="radio"/>
+<span>C) Judicial</span>
+</label>
+<div class="feedback">Correct answer: B — Legislative means Parliament making laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>4. What was Australia called after Federation?</h3>
+<label class="option">
+<input class="wrong" name="q4" type="radio"/>
+<span>A) The Australian Empire</span>
+</label>
+<label class="option">
+<input class="correct" name="q4" type="radio"/>
+<span>B) The Commonwealth of Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q4" type="radio"/>
+<span>C) The Republic of Australia</span>
+</label>
+<div class="feedback">Correct answer: A — The Commonwealth of Australia was formed in 1901.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>5. What is the federal Parliament made up of?</h3>
+<label class="option">
+<input class="correct" name="q5" type="radio"/>
+<span>A) The King, Senate and House of Representatives</span>
+</label>
+<label class="option">
+<input class="wrong" name="q5" type="radio"/>
+<span>B) Only the Prime Minister</span>
+</label>
+<label class="option">
+<input class="wrong" name="q5" type="radio"/>
+<span>C) Police, courts and councils</span>
+</label>
+<div class="feedback">Correct answer: C — Federal Parliament includes the King, Senate and House.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>6. Which symbol is on the Australian National Flag?</h3>
+<label class="option">
+<input class="wrong" name="q6" type="radio"/>
+<span>A) A court badge</span>
+</label>
+<label class="option">
+<input class="wrong" name="q6" type="radio"/>
+<span>B) A waratah only</span>
+</label>
+<label class="option">
+<input class="correct" name="q6" type="radio"/>
+<span>C) The Southern Cross</span>
+</label>
+<div class="feedback">Correct answer: C — The Southern Cross is on the Australian National Flag.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>7. Who gives Royal Assent to federal laws?</h3>
+<label class="option">
+<input class="correct" name="q7" type="radio"/>
+<span>A) The Governor-General</span>
+</label>
+<label class="option">
+<input class="wrong" name="q7" type="radio"/>
+<span>B) The Prime Minister</span>
+</label>
+<label class="option">
+<input class="wrong" name="q7" type="radio"/>
+<span>C) The Chief Justice</span>
+</label>
+<div class="feedback">Correct answer: A — The Governor-General gives Royal Assent.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>8. What is Australia’s national gemstone?</h3>
+<label class="option">
+<input class="correct" name="q8" type="radio"/>
+<span>A) Opal</span>
+</label>
+<label class="option">
+<input class="wrong" name="q8" type="radio"/>
+<span>B) Diamond</span>
+</label>
+<label class="option">
+<input class="wrong" name="q8" type="radio"/>
+<span>C) Ruby</span>
+</label>
+<div class="feedback">Correct answer: C — The opal is Australia’s national gemstone.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>9. Which official symbol identifies Commonwealth Government property?</h3>
+<label class="option">
+<input class="wrong" name="q9" type="radio"/>
+<span>A) National anthem</span>
+</label>
+<label class="option">
+<input class="correct" name="q9" type="radio"/>
+<span>B) Commonwealth Coat of Arms</span>
+</label>
+<label class="option">
+<input class="wrong" name="q9" type="radio"/>
+<span>C) Golden Wattle</span>
+</label>
+<div class="feedback">Correct answer: A — The Commonwealth Coat of Arms identifies Commonwealth Government property.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>10. Which city is the capital of the Northern Territory?</h3>
+<label class="option">
+<input class="wrong" name="q10" type="radio"/>
+<span>A) Canberra</span>
+</label>
+<label class="option">
+<input class="correct" name="q10" type="radio"/>
+<span>B) Darwin</span>
+</label>
+<label class="option">
+<input class="wrong" name="q10" type="radio"/>
+<span>C) Hobart</span>
+</label>
+<div class="feedback">Correct answer: A — Darwin is the capital of the Northern Territory.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>11. Which is not an arm of government?</h3>
+<label class="option">
+<input class="wrong" name="q11" type="radio"/>
+<span>A) Legislative</span>
+</label>
+<label class="option">
+<input class="correct" name="q11" type="radio"/>
+<span>B) Local</span>
+</label>
+<label class="option">
+<input class="wrong" name="q11" type="radio"/>
+<span>C) Executive</span>
+</label>
+<div class="feedback">Correct answer: B — Local is a level, not an arm.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>12. What is Australia’s national flower?</h3>
+<label class="option">
+<input class="correct" name="q12" type="radio"/>
+<span>A) Golden Wattle</span>
+</label>
+<label class="option">
+<input class="wrong" name="q12" type="radio"/>
+<span>B) Rose</span>
+</label>
+<label class="option">
+<input class="wrong" name="q12" type="radio"/>
+<span>C) Waratah</span>
+</label>
+<div class="feedback">Correct answer: B — The Golden Wattle is Australia’s national flower.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>13. What is one way to participate in Australian society?</h3>
+<label class="option">
+<input class="correct" name="q13" type="radio"/>
+<span>A) Vote, volunteer, or join community activities</span>
+</label>
+<label class="option">
+<input class="wrong" name="q13" type="radio"/>
+<span>B) Ignore community responsibilities</span>
+</label>
+<label class="option">
+<input class="wrong" name="q13" type="radio"/>
+<span>C) Avoid learning English forever</span>
+</label>
+<div class="feedback">Correct answer: C — Participation includes voting and community involvement.</div>
+</div>
+<div class="question">
+<div class="tag">Exam trap wording — mixed review</div>
+<h3>14. Which is a level of government?</h3>
+<label class="option">
+<input class="correct" name="q14" type="radio"/>
+<span>A) Federal</span>
+</label>
+<label class="option">
+<input class="wrong" name="q14" type="radio"/>
+<span>B) Executive</span>
+</label>
+<label class="option">
+<input class="wrong" name="q14" type="radio"/>
+<span>C) Judicial</span>
+</label>
+<div class="feedback">Correct answer: A — Federal is a level; judicial and executive are arms.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>15. What does an Australian citizen pledge to respect?</h3>
+<label class="option">
+<input class="correct" name="q15" type="radio"/>
+<span>A) Rights and liberties</span>
+</label>
+<label class="option">
+<input class="wrong" name="q15" type="radio"/>
+<span>B) Only one political party</span>
+</label>
+<label class="option">
+<input class="wrong" name="q15" type="radio"/>
+<span>C) Only local council rules</span>
+</label>
+<div class="feedback">Correct answer: A — The pledge includes respecting rights and liberties.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>16. Who conducts federal elections?</h3>
+<label class="option">
+<input class="correct" name="q16" type="radio"/>
+<span>A) Australian Electoral Commission</span>
+</label>
+<label class="option">
+<input class="wrong" name="q16" type="radio"/>
+<span>B) Local libraries</span>
+</label>
+<label class="option">
+<input class="wrong" name="q16" type="radio"/>
+<span>C) High Court</span>
+</label>
+<div class="feedback">Correct answer: A — The AEC conducts federal elections.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>17. What is a secret ballot?</h3>
+<label class="option">
+<input class="wrong" name="q17" type="radio"/>
+<span>A) Voting out loud</span>
+</label>
+<label class="option">
+<input class="correct" name="q17" type="radio"/>
+<span>B) Voting privately</span>
+</label>
+<label class="option">
+<input class="wrong" name="q17" type="radio"/>
+<span>C) Voting by your employer</span>
+</label>
+<div class="feedback">Correct answer: B — A secret ballot protects free choice.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>18. When does a bill become law?</h3>
+<label class="option">
+<input class="wrong" name="q18" type="radio"/>
+<span>A) When a mayor says yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q18" type="radio"/>
+<span>B) When police write it</span>
+</label>
+<label class="option">
+<input class="correct" name="q18" type="radio"/>
+<span>C) After it is passed and given Royal Assent</span>
+</label>
+<div class="feedback">Correct answer: B — Bills need passage and Royal Assent.</div>
+</div>
+<div class="question">
+<div class="tag">Exam trap wording — mixed review</div>
+<h3>19. Which is a constitutional change process?</h3>
+<label class="option">
+<input class="wrong" name="q19" type="radio"/>
+<span>A) Normal opinion poll</span>
+</label>
+<label class="option">
+<input class="wrong" name="q19" type="radio"/>
+<span>B) Court appeal only</span>
+</label>
+<label class="option">
+<input class="correct" name="q19" type="radio"/>
+<span>C) Referendum</span>
+</label>
+<div class="feedback">Correct answer: A — Constitutional change requires a referendum.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>20. What does equality before the law protect?</h3>
+<label class="option">
+<input class="wrong" name="q20" type="radio"/>
+<span>A) Special treatment for leaders</span>
+</label>
+<label class="option">
+<input class="wrong" name="q20" type="radio"/>
+<span>B) Different laws for different groups</span>
+</label>
+<label class="option">
+<input class="correct" name="q20" type="radio"/>
+<span>C) Fair treatment regardless of background</span>
+</label>
+<div class="feedback">Correct answer: B — Equality before the law means fair legal treatment.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>21. Which is not an Australian capital city?</h3>
+<label class="option">
+<input class="correct" name="q21" type="radio"/>
+<span>A) Auckland</span>
+</label>
+<label class="option">
+<input class="wrong" name="q21" type="radio"/>
+<span>B) Canberra</span>
+</label>
+<label class="option">
+<input class="wrong" name="q21" type="radio"/>
+<span>C) Darwin</span>
+</label>
+<div class="feedback">Correct answer: C — Auckland is in New Zealand.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>22. Which court can interpret the Constitution?</h3>
+<label class="option">
+<input class="wrong" name="q22" type="radio"/>
+<span>A) Police station</span>
+</label>
+<label class="option">
+<input class="correct" name="q22" type="radio"/>
+<span>B) High Court of Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q22" type="radio"/>
+<span>C) Local council</span>
+</label>
+<div class="feedback">Correct answer: B — The High Court can interpret the Constitution.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>23. Which level handles immigration?</h3>
+<label class="option">
+<input class="correct" name="q23" type="radio"/>
+<span>A) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q23" type="radio"/>
+<span>B) Local council</span>
+</label>
+<label class="option">
+<input class="wrong" name="q23" type="radio"/>
+<span>C) State government only</span>
+</label>
+<div class="feedback">Correct answer: A — Immigration is federal.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>24. What happened in 1901?</h3>
+<label class="option">
+<input class="correct" name="q24" type="radio"/>
+<span>A) The colonies united to form the Commonwealth of Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q24" type="radio"/>
+<span>B) Australia became a republic</span>
+</label>
+<label class="option">
+<input class="wrong" name="q24" type="radio"/>
+<span>C) The First Fleet arrived</span>
+</label>
+<div class="feedback">Correct answer: A — Federation happened in 1901.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>25. What is one reason Australia is called multicultural?</h3>
+<label class="option">
+<input class="correct" name="q25" type="radio"/>
+<span>A) People have come from many countries</span>
+</label>
+<label class="option">
+<input class="wrong" name="q25" type="radio"/>
+<span>B) Only one language is allowed</span>
+</label>
+<label class="option">
+<input class="wrong" name="q25" type="radio"/>
+<span>C) Everyone must follow one culture</span>
+</label>
+<div class="feedback">Correct answer: A — Australia has people from many backgrounds.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>26. Which level handles local roads?</h3>
+<label class="option">
+<input class="wrong" name="q26" type="radio"/>
+<span>A) High Court</span>
+</label>
+<label class="option">
+<input class="wrong" name="q26" type="radio"/>
+<span>B) Federal government</span>
+</label>
+<label class="option">
+<input class="correct" name="q26" type="radio"/>
+<span>C) Local government</span>
+</label>
+<div class="feedback">Correct answer: A — Local councils handle local roads.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>27. What are the three levels of government?</h3>
+<label class="option">
+<input class="wrong" name="q27" type="radio"/>
+<span>A) Legislative, executive, judicial</span>
+</label>
+<label class="option">
+<input class="wrong" name="q27" type="radio"/>
+<span>B) King, Governor-General, Prime Minister</span>
+</label>
+<label class="option">
+<input class="correct" name="q27" type="radio"/>
+<span>C) Federal, state/territory, local</span>
+</label>
+<div class="feedback">Correct answer: A — Australia has federal, state/territory and local governments.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>28. What may happen if you do not vote without a valid reason?</h3>
+<label class="option">
+<input class="wrong" name="q28" type="radio"/>
+<span>A) Nothing can happen</span>
+</label>
+<label class="option">
+<input class="wrong" name="q28" type="radio"/>
+<span>B) You lose citizenship automatically</span>
+</label>
+<label class="option">
+<input class="correct" name="q28" type="radio"/>
+<span>C) You may be fined</span>
+</label>
+<div class="feedback">Correct answer: C — You may be fined for not voting.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>29. What are the two elected houses of Federal Parliament?</h3>
+<label class="option">
+<input class="correct" name="q29" type="radio"/>
+<span>A) Senate and House of Representatives</span>
+</label>
+<label class="option">
+<input class="wrong" name="q29" type="radio"/>
+<span>B) Cabinet and courts</span>
+</label>
+<label class="option">
+<input class="wrong" name="q29" type="radio"/>
+<span>C) Councils and police</span>
+</label>
+<div class="feedback">Correct answer: C — The elected houses are Senate and House of Representatives.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>30. Which level handles local parks and libraries?</h3>
+<label class="option">
+<input class="correct" name="q30" type="radio"/>
+<span>A) Local government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q30" type="radio"/>
+<span>B) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q30" type="radio"/>
+<span>C) The Senate</span>
+</label>
+<div class="feedback">Correct answer: A — Local councils handle parks and libraries.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>31. Which state is Hobart in?</h3>
+<label class="option">
+<input class="wrong" name="q31" type="radio"/>
+<span>A) Queensland</span>
+</label>
+<label class="option">
+<input class="wrong" name="q31" type="radio"/>
+<span>B) Victoria</span>
+</label>
+<label class="option">
+<input class="correct" name="q31" type="radio"/>
+<span>C) Tasmania</span>
+</label>
+<div class="feedback">Correct answer: A — Hobart is in Tasmania.</div>
+</div>
+<div class="question">
+<div class="tag">Exam trap wording — mixed review</div>
+<h3>32. Which is a responsibility, not a right?</h3>
+<label class="option">
+<input class="correct" name="q32" type="radio"/>
+<span>A) Obeying the law</span>
+</label>
+<label class="option">
+<input class="wrong" name="q32" type="radio"/>
+<span>B) Freedom of religion</span>
+</label>
+<label class="option">
+<input class="wrong" name="q32" type="radio"/>
+<span>C) Freedom of speech</span>
+</label>
+<div class="feedback">Correct answer: B — Obeying law is a responsibility.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>33. Which arm of government interprets and applies laws?</h3>
+<label class="option">
+<input class="wrong" name="q33" type="radio"/>
+<span>A) Legislative</span>
+</label>
+<label class="option">
+<input class="correct" name="q33" type="radio"/>
+<span>B) Judicial</span>
+</label>
+<label class="option">
+<input class="wrong" name="q33" type="radio"/>
+<span>C) Executive</span>
+</label>
+<div class="feedback">Correct answer: A — Judicial means courts and judges.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>34. Which state is Perth in?</h3>
+<label class="option">
+<input class="wrong" name="q34" type="radio"/>
+<span>A) New South Wales</span>
+</label>
+<label class="option">
+<input class="correct" name="q34" type="radio"/>
+<span>B) Western Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q34" type="radio"/>
+<span>C) South Australia</span>
+</label>
+<div class="feedback">Correct answer: C — Perth is in Western Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>35. What may happen if you fail to vote without valid reason?</h3>
+<label class="option">
+<input class="correct" name="q35" type="radio"/>
+<span>A) You may be fined</span>
+</label>
+<label class="option">
+<input class="wrong" name="q35" type="radio"/>
+<span>B) You go to prison automatically</span>
+</label>
+<label class="option">
+<input class="wrong" name="q35" type="radio"/>
+<span>C) You lose citizenship</span>
+</label>
+<div class="feedback">Correct answer: C — A fine may apply.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>36. What is a privilege of Australian citizenship?</h3>
+<label class="option">
+<input class="correct" name="q36" type="radio"/>
+<span>A) Voting in federal and state or territory elections</span>
+</label>
+<label class="option">
+<input class="wrong" name="q36" type="radio"/>
+<span>B) Breaking laws</span>
+</label>
+<label class="option">
+<input class="wrong" name="q36" type="radio"/>
+<span>C) Avoiding taxes</span>
+</label>
+<div class="feedback">Correct answer: B — Voting is a privilege and responsibility.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>37. Should men and women have equal opportunity?</h3>
+<label class="option">
+<input class="correct" name="q37" type="radio"/>
+<span>A) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q37" type="radio"/>
+<span>B) No</span>
+</label>
+<label class="option">
+<input class="wrong" name="q37" type="radio"/>
+<span>C) Only in some states</span>
+</label>
+<div class="feedback">Correct answer: C — Men and women have equal rights and opportunities.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>38. What is Federation?</h3>
+<label class="option">
+<input class="correct" name="q38" type="radio"/>
+<span>A) The joining of the colonies into one nation</span>
+</label>
+<label class="option">
+<input class="wrong" name="q38" type="radio"/>
+<span>B) A court punishment</span>
+</label>
+<label class="option">
+<input class="wrong" name="q38" type="radio"/>
+<span>C) A local council election</span>
+</label>
+<div class="feedback">Correct answer: C — Federation joined the colonies into the Commonwealth of Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>39. Why are there three arms of government?</h3>
+<label class="option">
+<input class="correct" name="q39" type="radio"/>
+<span>A) To provide checks and balances</span>
+</label>
+<label class="option">
+<input class="wrong" name="q39" type="radio"/>
+<span>B) To make voting optional</span>
+</label>
+<label class="option">
+<input class="wrong" name="q39" type="radio"/>
+<span>C) To abolish states</span>
+</label>
+<div class="feedback">Correct answer: B — The arms help limit misuse of power.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>40. What is a civic responsibility?</h3>
+<label class="option">
+<input class="wrong" name="q40" type="radio"/>
+<span>A) Only helping your own group</span>
+</label>
+<label class="option">
+<input class="correct" name="q40" type="radio"/>
+<span>B) Contributing to society and obeying laws</span>
+</label>
+<label class="option">
+<input class="wrong" name="q40" type="radio"/>
+<span>C) Avoiding all elections</span>
+</label>
+<div class="feedback">Correct answer: A — Civic responsibility includes lawful participation.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>41. Which peoples have the oldest continuing cultures in the world?</h3>
+<label class="option">
+<input class="correct" name="q41" type="radio"/>
+<span>A) Aboriginal and Torres Strait Islander peoples</span>
+</label>
+<label class="option">
+<input class="wrong" name="q41" type="radio"/>
+<span>B) British colonists</span>
+</label>
+<label class="option">
+<input class="wrong" name="q41" type="radio"/>
+<span>C) European migrants</span>
+</label>
+<div class="feedback">Correct answer: C — First Nations cultures are among the oldest continuing cultures in the world.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>42. What is a bill?</h3>
+<label class="option">
+<input class="correct" name="q42" type="radio"/>
+<span>A) A proposed law</span>
+</label>
+<label class="option">
+<input class="wrong" name="q42" type="radio"/>
+<span>B) A police fine only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q42" type="radio"/>
+<span>C) A court sentence</span>
+</label>
+<div class="feedback">Correct answer: A — A bill is a proposed law.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>43. What is the Senate sometimes called?</h3>
+<label class="option">
+<input class="correct" name="q43" type="radio"/>
+<span>A) The upper house</span>
+</label>
+<label class="option">
+<input class="wrong" name="q43" type="radio"/>
+<span>B) The council chamber</span>
+</label>
+<label class="option">
+<input class="wrong" name="q43" type="radio"/>
+<span>C) The criminal court</span>
+</label>
+<div class="feedback">Correct answer: C — The Senate is the upper house.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>44. Which city is the capital of the Australian Capital Territory?</h3>
+<label class="option">
+<input class="correct" name="q44" type="radio"/>
+<span>A) Canberra</span>
+</label>
+<label class="option">
+<input class="wrong" name="q44" type="radio"/>
+<span>B) Brisbane</span>
+</label>
+<label class="option">
+<input class="wrong" name="q44" type="radio"/>
+<span>C) Sydney</span>
+</label>
+<div class="feedback">Correct answer: B — Canberra is the capital of the ACT.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>45. Which peoples are recognised as Australia’s First Peoples?</h3>
+<label class="option">
+<input class="wrong" name="q45" type="radio"/>
+<span>A) Only people born after 1901</span>
+</label>
+<label class="option">
+<input class="correct" name="q45" type="radio"/>
+<span>B) Aboriginal and Torres Strait Islander peoples</span>
+</label>
+<label class="option">
+<input class="wrong" name="q45" type="radio"/>
+<span>C) Only British settlers</span>
+</label>
+<div class="feedback">Correct answer: A — Australia’s First Peoples are Aboriginal and Torres Strait Islander peoples.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>46. Which is a right?</h3>
+<label class="option">
+<input class="wrong" name="q46" type="radio"/>
+<span>A) Using violence</span>
+</label>
+<label class="option">
+<input class="wrong" name="q46" type="radio"/>
+<span>B) Refusing to obey all laws</span>
+</label>
+<label class="option">
+<input class="correct" name="q46" type="radio"/>
+<span>C) Freedom of speech within the law</span>
+</label>
+<div class="feedback">Correct answer: C — Freedom of speech is a right within law.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>47. What is the Commonwealth Government?</h3>
+<label class="option">
+<input class="wrong" name="q47" type="radio"/>
+<span>A) A local council</span>
+</label>
+<label class="option">
+<input class="wrong" name="q47" type="radio"/>
+<span>B) A private business</span>
+</label>
+<label class="option">
+<input class="correct" name="q47" type="radio"/>
+<span>C) The federal or national government</span>
+</label>
+<div class="feedback">Correct answer: A — Commonwealth refers to the federal or national government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>48. What is democracy?</h3>
+<label class="option">
+<input class="correct" name="q48" type="radio"/>
+<span>A) Government by the people through elected representatives</span>
+</label>
+<label class="option">
+<input class="wrong" name="q48" type="radio"/>
+<span>B) Government by courts only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q48" type="radio"/>
+<span>C) Rule by one unelected person</span>
+</label>
+<div class="feedback">Correct answer: C — Democracy means people have a say through elections.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>49. What is the rule of law?</h3>
+<label class="option">
+<input class="wrong" name="q49" type="radio"/>
+<span>A) Leaders are above the law</span>
+</label>
+<label class="option">
+<input class="wrong" name="q49" type="radio"/>
+<span>B) Only migrants follow the law</span>
+</label>
+<label class="option">
+<input class="correct" name="q49" type="radio"/>
+<span>C) Everyone must follow the law</span>
+</label>
+<div class="feedback">Correct answer: B — Rule of law means the law applies to everyone.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>50. What does equality under the law mean?</h3>
+<label class="option">
+<input class="correct" name="q50" type="radio"/>
+<span>A) Everyone is treated equally by the law</span>
+</label>
+<label class="option">
+<input class="wrong" name="q50" type="radio"/>
+<span>B) Everyone earns the same income</span>
+</label>
+<label class="option">
+<input class="wrong" name="q50" type="radio"/>
+<span>C) Only citizens can go to court</span>
+</label>
+<div class="feedback">Correct answer: B — Equality before the law is a democratic belief.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>51. Which city is the capital of South Australia?</h3>
+<label class="option">
+<input class="wrong" name="q51" type="radio"/>
+<span>A) Darwin</span>
+</label>
+<label class="option">
+<input class="wrong" name="q51" type="radio"/>
+<span>B) Melbourne</span>
+</label>
+<label class="option">
+<input class="correct" name="q51" type="radio"/>
+<span>C) Adelaide</span>
+</label>
+<div class="feedback">Correct answer: C — Adelaide is the capital of South Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>52. What should citizens do if called for jury service?</h3>
+<label class="option">
+<input class="wrong" name="q52" type="radio"/>
+<span>A) Send another person</span>
+</label>
+<label class="option">
+<input class="wrong" name="q52" type="radio"/>
+<span>B) Ignore it</span>
+</label>
+<label class="option">
+<input class="correct" name="q52" type="radio"/>
+<span>C) Attend unless legally excused</span>
+</label>
+<div class="feedback">Correct answer: B — Jury service is a responsibility.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>53. Why is compulsory voting used?</h3>
+<label class="option">
+<input class="correct" name="q53" type="radio"/>
+<span>A) To encourage participation in democracy</span>
+</label>
+<label class="option">
+<input class="wrong" name="q53" type="radio"/>
+<span>B) To stop elections</span>
+</label>
+<label class="option">
+<input class="wrong" name="q53" type="radio"/>
+<span>C) To force one political view</span>
+</label>
+<div class="feedback">Correct answer: B — Compulsory voting supports participation.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>54. Which statement about Australia’s people is correct?</h3>
+<label class="option">
+<input class="wrong" name="q54" type="radio"/>
+<span>A) Only one group built Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q54" type="radio"/>
+<span>B) All cultures are banned</span>
+</label>
+<label class="option">
+<input class="correct" name="q54" type="radio"/>
+<span>C) Migrants have contributed to Australia</span>
+</label>
+<div class="feedback">Correct answer: B — Australia has been shaped by First Peoples and migrants.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>55. What does freedom of religion mean?</h3>
+<label class="option">
+<input class="wrong" name="q55" type="radio"/>
+<span>A) Religion is banned</span>
+</label>
+<label class="option">
+<input class="wrong" name="q55" type="radio"/>
+<span>B) Everyone must follow one religion</span>
+</label>
+<label class="option">
+<input class="correct" name="q55" type="radio"/>
+<span>C) People may choose a religion or no religion</span>
+</label>
+<div class="feedback">Correct answer: A — Freedom of religion includes choosing no religion.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>56. Which level mainly handles schools?</h3>
+<label class="option">
+<input class="correct" name="q56" type="radio"/>
+<span>A) State and territory governments</span>
+</label>
+<label class="option">
+<input class="wrong" name="q56" type="radio"/>
+<span>B) Local councils</span>
+</label>
+<label class="option">
+<input class="wrong" name="q56" type="radio"/>
+<span>C) The High Court</span>
+</label>
+<div class="feedback">Correct answer: C — Schools are mainly state/territory.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>57. Which level handles taxation at the national level?</h3>
+<label class="option">
+<input class="correct" name="q57" type="radio"/>
+<span>A) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q57" type="radio"/>
+<span>B) Local council</span>
+</label>
+<label class="option">
+<input class="wrong" name="q57" type="radio"/>
+<span>C) A jury</span>
+</label>
+<div class="feedback">Correct answer: B — Federal government handles national taxation.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>58. What is a referendum?</h3>
+<label class="option">
+<input class="wrong" name="q58" type="radio"/>
+<span>A) A council meeting</span>
+</label>
+<label class="option">
+<input class="wrong" name="q58" type="radio"/>
+<span>B) A court trial</span>
+</label>
+<label class="option">
+<input class="correct" name="q58" type="radio"/>
+<span>C) A national vote to change the Constitution</span>
+</label>
+<div class="feedback">Correct answer: A — A referendum is required to change the Constitution.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>59. What ocean lies to Australia’s east?</h3>
+<label class="option">
+<input class="wrong" name="q59" type="radio"/>
+<span>A) Atlantic Ocean</span>
+</label>
+<label class="option">
+<input class="correct" name="q59" type="radio"/>
+<span>B) Pacific Ocean</span>
+</label>
+<label class="option">
+<input class="wrong" name="q59" type="radio"/>
+<span>C) Arctic Ocean</span>
+</label>
+<div class="feedback">Correct answer: A — The Pacific Ocean is east of Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>60. Which freedom protects religious choice?</h3>
+<label class="option">
+<input class="wrong" name="q60" type="radio"/>
+<span>A) Freedom from government completely</span>
+</label>
+<label class="option">
+<input class="correct" name="q60" type="radio"/>
+<span>B) Freedom of religion</span>
+</label>
+<label class="option">
+<input class="wrong" name="q60" type="radio"/>
+<span>C) Freedom from elections</span>
+</label>
+<div class="feedback">Correct answer: C — Freedom of religion protects religious choice.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>61. Which day is Australia Day?</h3>
+<label class="option">
+<input class="wrong" name="q61" type="radio"/>
+<span>A) 25 April</span>
+</label>
+<label class="option">
+<input class="wrong" name="q61" type="radio"/>
+<span>B) 1 January</span>
+</label>
+<label class="option">
+<input class="correct" name="q61" type="radio"/>
+<span>C) 26 January</span>
+</label>
+<div class="feedback">Correct answer: B — Australia Day is on 26 January.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>62. Which is not an Australian state?</h3>
+<label class="option">
+<input class="wrong" name="q62" type="radio"/>
+<span>A) Victoria</span>
+</label>
+<label class="option">
+<input class="wrong" name="q62" type="radio"/>
+<span>B) Queensland</span>
+</label>
+<label class="option">
+<input class="correct" name="q62" type="radio"/>
+<span>C) New Zealand</span>
+</label>
+<div class="feedback">Correct answer: A — New Zealand is not an Australian state.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>63. Who decides legal disputes?</h3>
+<label class="option">
+<input class="wrong" name="q63" type="radio"/>
+<span>A) Political parties</span>
+</label>
+<label class="option">
+<input class="correct" name="q63" type="radio"/>
+<span>B) Courts</span>
+</label>
+<label class="option">
+<input class="wrong" name="q63" type="radio"/>
+<span>C) Local councils only</span>
+</label>
+<div class="feedback">Correct answer: B — Courts decide legal disputes.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>64. Who is the head of a state government?</h3>
+<label class="option">
+<input class="wrong" name="q64" type="radio"/>
+<span>A) Prime Minister</span>
+</label>
+<label class="option">
+<input class="wrong" name="q64" type="radio"/>
+<span>B) Governor-General</span>
+</label>
+<label class="option">
+<input class="correct" name="q64" type="radio"/>
+<span>C) Premier</span>
+</label>
+<div class="feedback">Correct answer: B — A Premier leads a state government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>65. What is Cabinet?</h3>
+<label class="option">
+<input class="wrong" name="q65" type="radio"/>
+<span>A) Local mayors</span>
+</label>
+<label class="option">
+<input class="wrong" name="q65" type="radio"/>
+<span>B) High Court judges</span>
+</label>
+<label class="option">
+<input class="correct" name="q65" type="radio"/>
+<span>C) Senior government ministers</span>
+</label>
+<div class="feedback">Correct answer: B — Cabinet includes senior ministers.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>66. Which language is used for the citizenship test?</h3>
+<label class="option">
+<input class="wrong" name="q66" type="radio"/>
+<span>A) Latin</span>
+</label>
+<label class="option">
+<input class="correct" name="q66" type="radio"/>
+<span>B) English</span>
+</label>
+<label class="option">
+<input class="wrong" name="q66" type="radio"/>
+<span>C) Any language chosen by the applicant</span>
+</label>
+<div class="feedback">Correct answer: B — The citizenship test is conducted in English.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>67. What is the role of Parliament?</h3>
+<label class="option">
+<input class="correct" name="q67" type="radio"/>
+<span>A) Make and change laws</span>
+</label>
+<label class="option">
+<input class="wrong" name="q67" type="radio"/>
+<span>B) Arrest people</span>
+</label>
+<label class="option">
+<input class="wrong" name="q67" type="radio"/>
+<span>C) Run criminal trials</span>
+</label>
+<div class="feedback">Correct answer: A — Parliament makes and changes laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>68. What should happen if people disagree politically?</h3>
+<label class="option">
+<input class="wrong" name="q68" type="radio"/>
+<span>A) They should use force</span>
+</label>
+<label class="option">
+<input class="wrong" name="q68" type="radio"/>
+<span>B) They should ignore the law</span>
+</label>
+<label class="option">
+<input class="correct" name="q68" type="radio"/>
+<span>C) They should resolve it peacefully</span>
+</label>
+<div class="feedback">Correct answer: A — Political disagreement must be peaceful.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>69. Can Australians criticise the government peacefully?</h3>
+<label class="option">
+<input class="wrong" name="q69" type="radio"/>
+<span>A) Only during elections</span>
+</label>
+<label class="option">
+<input class="correct" name="q69" type="radio"/>
+<span>B) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q69" type="radio"/>
+<span>C) No</span>
+</label>
+<div class="feedback">Correct answer: A — Peaceful criticism is allowed.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>70. Who is Australia’s Head of State?</h3>
+<label class="option">
+<input class="wrong" name="q70" type="radio"/>
+<span>A) The Prime Minister</span>
+</label>
+<label class="option">
+<input class="wrong" name="q70" type="radio"/>
+<span>B) The Governor-General</span>
+</label>
+<label class="option">
+<input class="correct" name="q70" type="radio"/>
+<span>C) The King</span>
+</label>
+<div class="feedback">Correct answer: B — The King is Australia’s Head of State.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>71. What must happen for the Constitution to change?</h3>
+<label class="option">
+<input class="wrong" name="q71" type="radio"/>
+<span>A) The police must approve it</span>
+</label>
+<label class="option">
+<input class="correct" name="q71" type="radio"/>
+<span>B) Voters must approve it in a referendum</span>
+</label>
+<label class="option">
+<input class="wrong" name="q71" type="radio"/>
+<span>C) The national anthem must change</span>
+</label>
+<div class="feedback">Correct answer: A — Constitutional change requires voter approval.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>72. Which right allows people to say what they think within the law?</h3>
+<label class="option">
+<input class="correct" name="q72" type="radio"/>
+<span>A) Freedom of speech</span>
+</label>
+<label class="option">
+<input class="wrong" name="q72" type="radio"/>
+<span>B) Freedom from court</span>
+</label>
+<label class="option">
+<input class="wrong" name="q72" type="radio"/>
+<span>C) Freedom from voting</span>
+</label>
+<div class="feedback">Correct answer: C — Freedom of speech allows lawful expression.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>73. What ocean lies to Australia’s west?</h3>
+<label class="option">
+<input class="correct" name="q73" type="radio"/>
+<span>A) Indian Ocean</span>
+</label>
+<label class="option">
+<input class="wrong" name="q73" type="radio"/>
+<span>B) Atlantic Ocean</span>
+</label>
+<label class="option">
+<input class="wrong" name="q73" type="radio"/>
+<span>C) Arctic Ocean</span>
+</label>
+<div class="feedback">Correct answer: C — The Indian Ocean is west of Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>74. What does freedom of movement mean?</h3>
+<label class="option">
+<input class="correct" name="q74" type="radio"/>
+<span>A) People can travel and live within Australia lawfully</span>
+</label>
+<label class="option">
+<input class="wrong" name="q74" type="radio"/>
+<span>B) People can trespass anywhere</span>
+</label>
+<label class="option">
+<input class="wrong" name="q74" type="radio"/>
+<span>C) People can ignore border rules</span>
+</label>
+<div class="feedback">Correct answer: A — Freedom of movement exists within law.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>75. Who is the head of a territory government?</h3>
+<label class="option">
+<input class="wrong" name="q75" type="radio"/>
+<span>A) Premier</span>
+</label>
+<label class="option">
+<input class="wrong" name="q75" type="radio"/>
+<span>B) Mayor only</span>
+</label>
+<label class="option">
+<input class="correct" name="q75" type="radio"/>
+<span>C) Chief Minister</span>
+</label>
+<div class="feedback">Correct answer: B — A Chief Minister leads a territory government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>76. Who becomes Prime Minister?</h3>
+<label class="option">
+<input class="correct" name="q76" type="radio"/>
+<span>A) The leader of the party or coalition with majority support</span>
+</label>
+<label class="option">
+<input class="wrong" name="q76" type="radio"/>
+<span>B) The Mayor of Canberra</span>
+</label>
+<label class="option">
+<input class="wrong" name="q76" type="radio"/>
+<span>C) The King personally chooses anyone</span>
+</label>
+<div class="feedback">Correct answer: B — The Prime Minister leads the majority party or coalition.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>77. Can citizens contact elected representatives?</h3>
+<label class="option">
+<input class="wrong" name="q77" type="radio"/>
+<span>A) No</span>
+</label>
+<label class="option">
+<input class="wrong" name="q77" type="radio"/>
+<span>B) Only during war</span>
+</label>
+<label class="option">
+<input class="correct" name="q77" type="radio"/>
+<span>C) Yes</span>
+</label>
+<div class="feedback">Correct answer: C — Citizens can contact representatives.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>78. What is a minister?</h3>
+<label class="option">
+<input class="wrong" name="q78" type="radio"/>
+<span>A) A local librarian only</span>
+</label>
+<label class="option">
+<input class="correct" name="q78" type="radio"/>
+<span>B) A member of government responsible for an area</span>
+</label>
+<label class="option">
+<input class="wrong" name="q78" type="radio"/>
+<span>C) A judge only</span>
+</label>
+<div class="feedback">Correct answer: C — Ministers manage government portfolios.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>79. What are the three arms of government?</h3>
+<label class="option">
+<input class="correct" name="q79" type="radio"/>
+<span>A) Legislative, executive, judicial</span>
+</label>
+<label class="option">
+<input class="wrong" name="q79" type="radio"/>
+<span>B) Federal, state, local</span>
+</label>
+<label class="option">
+<input class="wrong" name="q79" type="radio"/>
+<span>C) Senate, Cabinet, police</span>
+</label>
+<div class="feedback">Correct answer: A — The arms are legislative, executive and judicial.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>80. Which day is Anzac Day?</h3>
+<label class="option">
+<input class="correct" name="q80" type="radio"/>
+<span>A) 25 April</span>
+</label>
+<label class="option">
+<input class="wrong" name="q80" type="radio"/>
+<span>B) 26 January</span>
+</label>
+<label class="option">
+<input class="wrong" name="q80" type="radio"/>
+<span>C) 1 January</span>
+</label>
+<div class="feedback">Correct answer: A — Anzac Day is on 25 April.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>81. What is the highest court in Australia?</h3>
+<label class="option">
+<input class="correct" name="q81" type="radio"/>
+<span>A) High Court of Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q81" type="radio"/>
+<span>B) Federal Court</span>
+</label>
+<label class="option">
+<input class="wrong" name="q81" type="radio"/>
+<span>C) State Magistrates Court</span>
+</label>
+<div class="feedback">Correct answer: A — The High Court is the highest court.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>82. What is a responsibility of Australian citizens?</h3>
+<label class="option">
+<input class="wrong" name="q82" type="radio"/>
+<span>A) Own land</span>
+</label>
+<label class="option">
+<input class="wrong" name="q82" type="radio"/>
+<span>B) Join a political party</span>
+</label>
+<label class="option">
+<input class="correct" name="q82" type="radio"/>
+<span>C) Obey Australian laws</span>
+</label>
+<div class="feedback">Correct answer: A — Citizens must obey Australian laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>83. Which belief is part of Australian democracy?</h3>
+<label class="option">
+<input class="correct" name="q83" type="radio"/>
+<span>A) Peaceful transfer of power through elections</span>
+</label>
+<label class="option">
+<input class="wrong" name="q83" type="radio"/>
+<span>B) One permanent ruler</span>
+</label>
+<label class="option">
+<input class="wrong" name="q83" type="radio"/>
+<span>C) Violence after elections</span>
+</label>
+<div class="feedback">Correct answer: B — Elections allow peaceful change.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>84. What is the House of Representatives sometimes called?</h3>
+<label class="option">
+<input class="wrong" name="q84" type="radio"/>
+<span>A) The local house</span>
+</label>
+<label class="option">
+<input class="correct" name="q84" type="radio"/>
+<span>B) The lower house</span>
+</label>
+<label class="option">
+<input class="wrong" name="q84" type="radio"/>
+<span>C) The High Court</span>
+</label>
+<div class="feedback">Correct answer: A — The House of Representatives is the lower house.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>85. Who decides if someone has broken criminal law in court?</h3>
+<label class="option">
+<input class="wrong" name="q85" type="radio"/>
+<span>A) The Prime Minister alone</span>
+</label>
+<label class="option">
+<input class="correct" name="q85" type="radio"/>
+<span>B) The courts</span>
+</label>
+<label class="option">
+<input class="wrong" name="q85" type="radio"/>
+<span>C) Local newspaper polls</span>
+</label>
+<div class="feedback">Correct answer: A — Courts decide guilt according to law.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>86. Why are laws important?</h3>
+<label class="option">
+<input class="correct" name="q86" type="radio"/>
+<span>A) They help keep order and protect rights</span>
+</label>
+<label class="option">
+<input class="wrong" name="q86" type="radio"/>
+<span>B) They replace elections</span>
+</label>
+<label class="option">
+<input class="wrong" name="q86" type="radio"/>
+<span>C) They stop all disagreement</span>
+</label>
+<div class="feedback">Correct answer: C — Laws protect society and rights.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>87. Which national symbol is a gemstone?</h3>
+<label class="option">
+<input class="correct" name="q87" type="radio"/>
+<span>A) Opal</span>
+</label>
+<label class="option">
+<input class="wrong" name="q87" type="radio"/>
+<span>B) Diamond</span>
+</label>
+<label class="option">
+<input class="wrong" name="q87" type="radio"/>
+<span>C) Ruby</span>
+</label>
+<div class="feedback">Correct answer: A — Opal is Australia’s national gemstone.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>88. Which event created the Commonwealth of Australia?</h3>
+<label class="option">
+<input class="correct" name="q88" type="radio"/>
+<span>A) Federation</span>
+</label>
+<label class="option">
+<input class="wrong" name="q88" type="radio"/>
+<span>B) Gold rush</span>
+</label>
+<label class="option">
+<input class="wrong" name="q88" type="radio"/>
+<span>C) Anzac landing</span>
+</label>
+<div class="feedback">Correct answer: A — Federation created the Commonwealth of Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>89. What does being tried fairly mean?</h3>
+<label class="option">
+<input class="correct" name="q89" type="radio"/>
+<span>A) Courts follow legal process and fairness</span>
+</label>
+<label class="option">
+<input class="wrong" name="q89" type="radio"/>
+<span>B) Police decide guilt alone</span>
+</label>
+<label class="option">
+<input class="wrong" name="q89" type="radio"/>
+<span>C) The public votes on guilt</span>
+</label>
+<div class="feedback">Correct answer: B — Fair trials are part of the rule of law.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>90. Can citizens choose not to join a political party?</h3>
+<label class="option">
+<input class="correct" name="q90" type="radio"/>
+<span>A) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q90" type="radio"/>
+<span>B) Only if they are over 30</span>
+</label>
+<label class="option">
+<input class="wrong" name="q90" type="radio"/>
+<span>C) No</span>
+</label>
+<div class="feedback">Correct answer: A — People are free to associate or not.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>91. Who enforces laws?</h3>
+<label class="option">
+<input class="wrong" name="q91" type="radio"/>
+<span>A) Only voters</span>
+</label>
+<label class="option">
+<input class="wrong" name="q91" type="radio"/>
+<span>B) Only the King</span>
+</label>
+<label class="option">
+<input class="correct" name="q91" type="radio"/>
+<span>C) Police and government authorities</span>
+</label>
+<div class="feedback">Correct answer: B — Police and authorities enforce laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>92. Which answer best shows participation in democracy?</h3>
+<label class="option">
+<input class="wrong" name="q92" type="radio"/>
+<span>A) Threatening others</span>
+</label>
+<label class="option">
+<input class="correct" name="q92" type="radio"/>
+<span>B) Voting and being informed</span>
+</label>
+<label class="option">
+<input class="wrong" name="q92" type="radio"/>
+<span>C) Refusing to vote</span>
+</label>
+<div class="feedback">Correct answer: C — Participation includes voting and being informed.</div>
+</div>
+<div class="question">
+<div class="tag">Exam trap wording — mixed review</div>
+<h3>93. Which is an arm of government?</h3>
+<label class="option">
+<input class="wrong" name="q93" type="radio"/>
+<span>A) Local</span>
+</label>
+<label class="option">
+<input class="correct" name="q93" type="radio"/>
+<span>B) Judicial</span>
+</label>
+<label class="option">
+<input class="wrong" name="q93" type="radio"/>
+<span>C) State/Territory</span>
+</label>
+<div class="feedback">Correct answer: B — Judicial is an arm; local and state are levels.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>94. What does the judiciary do?</h3>
+<label class="option">
+<input class="correct" name="q94" type="radio"/>
+<span>A) Interprets and applies the law</span>
+</label>
+<label class="option">
+<input class="wrong" name="q94" type="radio"/>
+<span>B) Collects rubbish</span>
+</label>
+<label class="option">
+<input class="wrong" name="q94" type="radio"/>
+<span>C) Runs political campaigns</span>
+</label>
+<div class="feedback">Correct answer: B — The judiciary means courts and judges.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>95. What is Australia’s capital city?</h3>
+<label class="option">
+<input class="correct" name="q95" type="radio"/>
+<span>A) Canberra</span>
+</label>
+<label class="option">
+<input class="wrong" name="q95" type="radio"/>
+<span>B) Sydney</span>
+</label>
+<label class="option">
+<input class="wrong" name="q95" type="radio"/>
+<span>C) Melbourne</span>
+</label>
+<div class="feedback">Correct answer: C — Canberra is Australia’s capital city.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>96. Which government is responsible for public transport in most cases?</h3>
+<label class="option">
+<input class="wrong" name="q96" type="radio"/>
+<span>A) The High Court</span>
+</label>
+<label class="option">
+<input class="wrong" name="q96" type="radio"/>
+<span>B) The Governor-General only</span>
+</label>
+<label class="option">
+<input class="correct" name="q96" type="radio"/>
+<span>C) State or territory government</span>
+</label>
+<div class="feedback">Correct answer: A — Public transport is mainly state or territory.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>97. Which level handles foreign affairs?</h3>
+<label class="option">
+<input class="correct" name="q97" type="radio"/>
+<span>A) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q97" type="radio"/>
+<span>B) State government only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q97" type="radio"/>
+<span>C) Local council</span>
+</label>
+<div class="feedback">Correct answer: B — Foreign affairs are federal.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>98. Can Australian citizens seek consular help overseas?</h3>
+<label class="option">
+<input class="wrong" name="q98" type="radio"/>
+<span>A) Only tourists can</span>
+</label>
+<label class="option">
+<input class="correct" name="q98" type="radio"/>
+<span>B) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q98" type="radio"/>
+<span>C) No</span>
+</label>
+<div class="feedback">Correct answer: B — Citizens may seek consular assistance overseas.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>99. Which level mainly handles police?</h3>
+<label class="option">
+<input class="wrong" name="q99" type="radio"/>
+<span>A) Federal Parliament only</span>
+</label>
+<label class="option">
+<input class="correct" name="q99" type="radio"/>
+<span>B) State and territory governments</span>
+</label>
+<label class="option">
+<input class="wrong" name="q99" type="radio"/>
+<span>C) Local councils</span>
+</label>
+<div class="feedback">Correct answer: B — Police are mainly state/territory.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>100. What does the Constitution do?</h3>
+<label class="option">
+<input class="correct" name="q100" type="radio"/>
+<span>A) Sets out powers of government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q100" type="radio"/>
+<span>B) Chooses every Prime Minister directly</span>
+</label>
+<label class="option">
+<input class="wrong" name="q100" type="radio"/>
+<span>C) Runs local rubbish collection</span>
+</label>
+<div class="feedback">Correct answer: A — The Constitution sets powers and structure of government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>101. Which city is the capital of New South Wales?</h3>
+<label class="option">
+<input class="wrong" name="q101" type="radio"/>
+<span>A) Brisbane</span>
+</label>
+<label class="option">
+<input class="wrong" name="q101" type="radio"/>
+<span>B) Canberra</span>
+</label>
+<label class="option">
+<input class="correct" name="q101" type="radio"/>
+<span>C) Sydney</span>
+</label>
+<div class="feedback">Correct answer: A — Sydney is the capital of New South Wales.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>102. Which city is the capital of Queensland?</h3>
+<label class="option">
+<input class="wrong" name="q102" type="radio"/>
+<span>A) Adelaide</span>
+</label>
+<label class="option">
+<input class="wrong" name="q102" type="radio"/>
+<span>B) Darwin</span>
+</label>
+<label class="option">
+<input class="correct" name="q102" type="radio"/>
+<span>C) Brisbane</span>
+</label>
+<div class="feedback">Correct answer: B — Brisbane is the capital of Queensland.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>103. Which level handles rubbish collection?</h3>
+<label class="option">
+<input class="wrong" name="q103" type="radio"/>
+<span>A) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q103" type="radio"/>
+<span>B) State governor only</span>
+</label>
+<label class="option">
+<input class="correct" name="q103" type="radio"/>
+<span>C) Local government</span>
+</label>
+<div class="feedback">Correct answer: B — Local councils handle rubbish collection.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>104. Which statement is correct about Australian society?</h3>
+<label class="option">
+<input class="wrong" name="q104" type="radio"/>
+<span>A) Only citizens have human dignity</span>
+</label>
+<label class="option">
+<input class="wrong" name="q104" type="radio"/>
+<span>B) Some groups are above the law</span>
+</label>
+<label class="option">
+<input class="correct" name="q104" type="radio"/>
+<span>C) People are equal under the law</span>
+</label>
+<div class="feedback">Correct answer: C — Equality under law is important.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>105. Can people be discriminated against because of race?</h3>
+<label class="option">
+<input class="wrong" name="q105" type="radio"/>
+<span>A) Yes</span>
+</label>
+<label class="option">
+<input class="correct" name="q105" type="radio"/>
+<span>B) No</span>
+</label>
+<label class="option">
+<input class="wrong" name="q105" type="radio"/>
+<span>C) Only in politics</span>
+</label>
+<div class="feedback">Correct answer: A — Racial discrimination is not acceptable.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>106. Who leads many local councils?</h3>
+<label class="option">
+<input class="wrong" name="q106" type="radio"/>
+<span>A) Chief Justice</span>
+</label>
+<label class="option">
+<input class="correct" name="q106" type="radio"/>
+<span>B) Mayor</span>
+</label>
+<label class="option">
+<input class="wrong" name="q106" type="radio"/>
+<span>C) Prime Minister</span>
+</label>
+<div class="feedback">Correct answer: C — Mayors lead many councils.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>107. Which answer is a level of government?</h3>
+<label class="option">
+<input class="wrong" name="q107" type="radio"/>
+<span>A) Executive</span>
+</label>
+<label class="option">
+<input class="wrong" name="q107" type="radio"/>
+<span>B) Judicial</span>
+</label>
+<label class="option">
+<input class="correct" name="q107" type="radio"/>
+<span>C) Local</span>
+</label>
+<div class="feedback">Correct answer: B — Local is a level of government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>108. Who forms government after a federal election?</h3>
+<label class="option">
+<input class="correct" name="q108" type="radio"/>
+<span>A) The party or coalition with majority support in the House of Representatives</span>
+</label>
+<label class="option">
+<input class="wrong" name="q108" type="radio"/>
+<span>B) The local councils</span>
+</label>
+<label class="option">
+<input class="wrong" name="q108" type="radio"/>
+<span>C) The High Court</span>
+</label>
+<div class="feedback">Correct answer: B — Government is formed by majority support in the House.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>109. What is one common term for Aboriginal and Torres Strait Islander peoples?</h3>
+<label class="option">
+<input class="correct" name="q109" type="radio"/>
+<span>A) First Peoples</span>
+</label>
+<label class="option">
+<input class="wrong" name="q109" type="radio"/>
+<span>B) First Fleet only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q109" type="radio"/>
+<span>C) First Parliament</span>
+</label>
+<div class="feedback">Correct answer: C — First Peoples refers to Aboriginal and Torres Strait Islander peoples.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>110. What is Australia’s national anthem?</h3>
+<label class="option">
+<input class="wrong" name="q110" type="radio"/>
+<span>A) Waltzing Matilda</span>
+</label>
+<label class="option">
+<input class="correct" name="q110" type="radio"/>
+<span>B) Advance Australia Fair</span>
+</label>
+<label class="option">
+<input class="wrong" name="q110" type="radio"/>
+<span>C) God Save the King</span>
+</label>
+<div class="feedback">Correct answer: A — Australia’s national anthem is Advance Australia Fair.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>111. What is parliamentary democracy?</h3>
+<label class="option">
+<input class="correct" name="q111" type="radio"/>
+<span>A) Citizens elect representatives to Parliament</span>
+</label>
+<label class="option">
+<input class="wrong" name="q111" type="radio"/>
+<span>B) The monarch makes all laws alone</span>
+</label>
+<label class="option">
+<input class="wrong" name="q111" type="radio"/>
+<span>C) Police choose the government</span>
+</label>
+<div class="feedback">Correct answer: A — Australia is a parliamentary democracy.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>112. What are the two groups of Australia’s First Peoples?</h3>
+<label class="option">
+<input class="correct" name="q112" type="radio"/>
+<span>A) Aboriginal peoples and Torres Strait Islander peoples</span>
+</label>
+<label class="option">
+<input class="wrong" name="q112" type="radio"/>
+<span>B) States and territories</span>
+</label>
+<label class="option">
+<input class="wrong" name="q112" type="radio"/>
+<span>C) Convicts and settlers</span>
+</label>
+<div class="feedback">Correct answer: A — Australia recognises Aboriginal and Torres Strait Islander peoples.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>113. Which is a territory of Australia?</h3>
+<label class="option">
+<input class="wrong" name="q113" type="radio"/>
+<span>A) Bali</span>
+</label>
+<label class="option">
+<input class="correct" name="q113" type="radio"/>
+<span>B) Northern Territory</span>
+</label>
+<label class="option">
+<input class="wrong" name="q113" type="radio"/>
+<span>C) New Zealand</span>
+</label>
+<div class="feedback">Correct answer: C — The Northern Territory is an Australian territory.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>114. Which city is the capital of Western Australia?</h3>
+<label class="option">
+<input class="wrong" name="q114" type="radio"/>
+<span>A) Adelaide</span>
+</label>
+<label class="option">
+<input class="correct" name="q114" type="radio"/>
+<span>B) Perth</span>
+</label>
+<label class="option">
+<input class="wrong" name="q114" type="radio"/>
+<span>C) Hobart</span>
+</label>
+<div class="feedback">Correct answer: A — Perth is the capital of Western Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>115. What is a jury?</h3>
+<label class="option">
+<input class="wrong" name="q115" type="radio"/>
+<span>A) A council committee</span>
+</label>
+<label class="option">
+<input class="wrong" name="q115" type="radio"/>
+<span>B) A group of ministers</span>
+</label>
+<label class="option">
+<input class="correct" name="q115" type="radio"/>
+<span>C) A group of citizens who may decide facts in court</span>
+</label>
+<div class="feedback">Correct answer: B — A jury assists the court in certain trials.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>116. Which state is Brisbane in?</h3>
+<label class="option">
+<input class="wrong" name="q116" type="radio"/>
+<span>A) Tasmania</span>
+</label>
+<label class="option">
+<input class="correct" name="q116" type="radio"/>
+<span>B) Queensland</span>
+</label>
+<label class="option">
+<input class="wrong" name="q116" type="radio"/>
+<span>C) Victoria</span>
+</label>
+<div class="feedback">Correct answer: B — Brisbane is in Queensland.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>117. What is the name of Australia’s national flag?</h3>
+<label class="option">
+<input class="wrong" name="q117" type="radio"/>
+<span>A) Commonwealth Court Flag</span>
+</label>
+<label class="option">
+<input class="correct" name="q117" type="radio"/>
+<span>B) Australian National Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q117" type="radio"/>
+<span>C) Federal Council Flag</span>
+</label>
+<div class="feedback">Correct answer: C — The Australian National Flag is the national flag.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>118. Which answer best shows respect for rights?</h3>
+<label class="option">
+<input class="correct" name="q118" type="radio"/>
+<span>A) Allowing others to express lawful views</span>
+</label>
+<label class="option">
+<input class="wrong" name="q118" type="radio"/>
+<span>B) Silencing peaceful disagreement</span>
+</label>
+<label class="option">
+<input class="wrong" name="q118" type="radio"/>
+<span>C) Using intimidation</span>
+</label>
+<div class="feedback">Correct answer: C — Respect for rights includes peaceful disagreement.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>119. What happened in 1788?</h3>
+<label class="option">
+<input class="correct" name="q119" type="radio"/>
+<span>A) The First Fleet arrived from Great Britain</span>
+</label>
+<label class="option">
+<input class="wrong" name="q119" type="radio"/>
+<span>B) Australia became a federation</span>
+</label>
+<label class="option">
+<input class="wrong" name="q119" type="radio"/>
+<span>C) The High Court was created</span>
+</label>
+<div class="feedback">Correct answer: A — The First Fleet arrived in 1788.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>120. What should citizens do with the rights and liberties of others?</h3>
+<label class="option">
+<input class="wrong" name="q120" type="radio"/>
+<span>A) Remove them</span>
+</label>
+<label class="option">
+<input class="correct" name="q120" type="radio"/>
+<span>B) Respect them</span>
+</label>
+<label class="option">
+<input class="wrong" name="q120" type="radio"/>
+<span>C) Ignore them</span>
+</label>
+<div class="feedback">Correct answer: B — Rights come with respect for others.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>121. What does federal government mean?</h3>
+<label class="option">
+<input class="wrong" name="q121" type="radio"/>
+<span>A) Only a courtroom</span>
+</label>
+<label class="option">
+<input class="correct" name="q121" type="radio"/>
+<span>B) National government of Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q121" type="radio"/>
+<span>C) Only a city council</span>
+</label>
+<div class="feedback">Correct answer: C — Federal means national or Commonwealth.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>122. What animals are on the Commonwealth Coat of Arms?</h3>
+<label class="option">
+<input class="wrong" name="q122" type="radio"/>
+<span>A) Koala and wombat</span>
+</label>
+<label class="option">
+<input class="correct" name="q122" type="radio"/>
+<span>B) Kangaroo and emu</span>
+</label>
+<label class="option">
+<input class="wrong" name="q122" type="radio"/>
+<span>C) Dingo and crocodile</span>
+</label>
+<div class="feedback">Correct answer: A — The Coat of Arms features a kangaroo and an emu.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>123. What is Australia’s national language?</h3>
+<label class="option">
+<input class="correct" name="q123" type="radio"/>
+<span>A) English</span>
+</label>
+<label class="option">
+<input class="wrong" name="q123" type="radio"/>
+<span>B) Latin</span>
+</label>
+<label class="option">
+<input class="wrong" name="q123" type="radio"/>
+<span>C) French</span>
+</label>
+<div class="feedback">Correct answer: C — English is Australia’s national language.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>124. Which people have a continuing connection to land and sea?</h3>
+<label class="option">
+<input class="wrong" name="q124" type="radio"/>
+<span>A) Only local councils</span>
+</label>
+<label class="option">
+<input class="wrong" name="q124" type="radio"/>
+<span>B) Only recent migrants</span>
+</label>
+<label class="option">
+<input class="correct" name="q124" type="radio"/>
+<span>C) Aboriginal and Torres Strait Islander peoples</span>
+</label>
+<div class="feedback">Correct answer: A — First Peoples have continuing connection to land and sea.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>125. What does an Australian citizen pledge to obey?</h3>
+<label class="option">
+<input class="wrong" name="q125" type="radio"/>
+<span>A) Only personal customs</span>
+</label>
+<label class="option">
+<input class="correct" name="q125" type="radio"/>
+<span>B) Australian laws</span>
+</label>
+<label class="option">
+<input class="wrong" name="q125" type="radio"/>
+<span>C) Only workplace rules</span>
+</label>
+<div class="feedback">Correct answer: C — The pledge includes upholding and obeying laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>126. Who were Australia’s first inhabitants?</h3>
+<label class="option">
+<input class="wrong" name="q126" type="radio"/>
+<span>A) British governors</span>
+</label>
+<label class="option">
+<input class="wrong" name="q126" type="radio"/>
+<span>B) The First Fleet</span>
+</label>
+<label class="option">
+<input class="correct" name="q126" type="radio"/>
+<span>C) Aboriginal and Torres Strait Islander peoples</span>
+</label>
+<div class="feedback">Correct answer: C — Australia’s First Peoples are Aboriginal and Torres Strait Islander peoples.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>127. Which national symbol is a plant?</h3>
+<label class="option">
+<input class="wrong" name="q127" type="radio"/>
+<span>A) Commonwealth Star</span>
+</label>
+<label class="option">
+<input class="correct" name="q127" type="radio"/>
+<span>B) Golden Wattle</span>
+</label>
+<label class="option">
+<input class="wrong" name="q127" type="radio"/>
+<span>C) Southern Cross</span>
+</label>
+<div class="feedback">Correct answer: C — Golden Wattle is the national floral emblem.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>128. Which government is responsible for citizenship?</h3>
+<label class="option">
+<input class="wrong" name="q128" type="radio"/>
+<span>A) Local council</span>
+</label>
+<label class="option">
+<input class="correct" name="q128" type="radio"/>
+<span>B) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q128" type="radio"/>
+<span>C) State school only</span>
+</label>
+<div class="feedback">Correct answer: B — Citizenship is federal.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>129. Which action damages democracy?</h3>
+<label class="option">
+<input class="wrong" name="q129" type="radio"/>
+<span>A) Voting</span>
+</label>
+<label class="option">
+<input class="correct" name="q129" type="radio"/>
+<span>B) Using violence to silence people</span>
+</label>
+<label class="option">
+<input class="wrong" name="q129" type="radio"/>
+<span>C) Peacefully debating issues</span>
+</label>
+<div class="feedback">Correct answer: A — Violence and intimidation damage democracy.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>130. Can peaceful protest be part of democracy?</h3>
+<label class="option">
+<input class="wrong" name="q130" type="radio"/>
+<span>A) No</span>
+</label>
+<label class="option">
+<input class="correct" name="q130" type="radio"/>
+<span>B) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q130" type="radio"/>
+<span>C) Only outside Australia</span>
+</label>
+<div class="feedback">Correct answer: A — Peaceful protest is democratic participation.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>131. Which institution is part of the judicial arm?</h3>
+<label class="option">
+<input class="wrong" name="q131" type="radio"/>
+<span>A) Local council rubbish service</span>
+</label>
+<label class="option">
+<input class="wrong" name="q131" type="radio"/>
+<span>B) Cabinet</span>
+</label>
+<label class="option">
+<input class="correct" name="q131" type="radio"/>
+<span>C) Courts</span>
+</label>
+<div class="feedback">Correct answer: C — Courts are judicial.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>132. What is the voting age?</h3>
+<label class="option">
+<input class="correct" name="q132" type="radio"/>
+<span>A) 18</span>
+</label>
+<label class="option">
+<input class="wrong" name="q132" type="radio"/>
+<span>B) 16</span>
+</label>
+<label class="option">
+<input class="wrong" name="q132" type="radio"/>
+<span>C) 21</span>
+</label>
+<div class="feedback">Correct answer: A — Voting age is 18.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>133. Can anyone be above the law in Australia?</h3>
+<label class="option">
+<input class="wrong" name="q133" type="radio"/>
+<span>A) Only wealthy people</span>
+</label>
+<label class="option">
+<input class="wrong" name="q133" type="radio"/>
+<span>B) Yes</span>
+</label>
+<label class="option">
+<input class="correct" name="q133" type="radio"/>
+<span>C) No</span>
+</label>
+<div class="feedback">Correct answer: B — No person or group is above the law.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>134. Can citizens join a political party?</h3>
+<label class="option">
+<input class="wrong" name="q134" type="radio"/>
+<span>A) Only if invited by government</span>
+</label>
+<label class="option">
+<input class="correct" name="q134" type="radio"/>
+<span>B) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q134" type="radio"/>
+<span>C) No</span>
+</label>
+<div class="feedback">Correct answer: C — Freedom of association allows lawful political participation.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>135. What is compulsory for Australian citizens aged 18 and over?</h3>
+<label class="option">
+<input class="wrong" name="q135" type="radio"/>
+<span>A) Owning property</span>
+</label>
+<label class="option">
+<input class="correct" name="q135" type="radio"/>
+<span>B) Voting in elections if enrolled</span>
+</label>
+<label class="option">
+<input class="wrong" name="q135" type="radio"/>
+<span>C) Military service</span>
+</label>
+<div class="feedback">Correct answer: B — Voting is compulsory.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>136. Which city is the capital of Victoria?</h3>
+<label class="option">
+<input class="correct" name="q136" type="radio"/>
+<span>A) Melbourne</span>
+</label>
+<label class="option">
+<input class="wrong" name="q136" type="radio"/>
+<span>B) Perth</span>
+</label>
+<label class="option">
+<input class="wrong" name="q136" type="radio"/>
+<span>C) Sydney</span>
+</label>
+<div class="feedback">Correct answer: C — Melbourne is the capital of Victoria.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>137. Which arm of government puts laws into action?</h3>
+<label class="option">
+<input class="wrong" name="q137" type="radio"/>
+<span>A) Legislative</span>
+</label>
+<label class="option">
+<input class="wrong" name="q137" type="radio"/>
+<span>B) Judicial</span>
+</label>
+<label class="option">
+<input class="correct" name="q137" type="radio"/>
+<span>C) Executive</span>
+</label>
+<div class="feedback">Correct answer: A — Executive means ministers and departments carrying out laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>138. What does Australia Day commonly mark?</h3>
+<label class="option">
+<input class="wrong" name="q138" type="radio"/>
+<span>A) The end of World War I</span>
+</label>
+<label class="option">
+<input class="correct" name="q138" type="radio"/>
+<span>B) The arrival of the First Fleet in 1788</span>
+</label>
+<label class="option">
+<input class="wrong" name="q138" type="radio"/>
+<span>C) Federation in 1901</span>
+</label>
+<div class="feedback">Correct answer: A — Australia Day is observed on 26 January.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>139. What does the Southern Cross on the Australian flag represent?</h3>
+<label class="option">
+<input class="correct" name="q139" type="radio"/>
+<span>A) A constellation visible in the southern sky</span>
+</label>
+<label class="option">
+<input class="wrong" name="q139" type="radio"/>
+<span>B) A government department</span>
+</label>
+<label class="option">
+<input class="wrong" name="q139" type="radio"/>
+<span>C) A political party</span>
+</label>
+<div class="feedback">Correct answer: A — The Southern Cross is a constellation.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>140. What does the Union Jack on the Australian flag show?</h3>
+<label class="option">
+<input class="wrong" name="q140" type="radio"/>
+<span>A) The High Court</span>
+</label>
+<label class="option">
+<input class="correct" name="q140" type="radio"/>
+<span>B) Australia’s historical links with Britain</span>
+</label>
+<label class="option">
+<input class="wrong" name="q140" type="radio"/>
+<span>C) Australia’s local councils</span>
+</label>
+<div class="feedback">Correct answer: C — The Union Jack reflects Australia’s historical links with Britain.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>141. What does a multicultural society include?</h3>
+<label class="option">
+<input class="wrong" name="q141" type="radio"/>
+<span>A) No religious freedom</span>
+</label>
+<label class="option">
+<input class="correct" name="q141" type="radio"/>
+<span>B) People with different backgrounds, cultures and beliefs</span>
+</label>
+<label class="option">
+<input class="wrong" name="q141" type="radio"/>
+<span>C) Only one culture</span>
+</label>
+<div class="feedback">Correct answer: A — Multicultural society includes many backgrounds.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>142. Who represents the King in Australia at the federal level?</h3>
+<label class="option">
+<input class="wrong" name="q142" type="radio"/>
+<span>A) The Prime Minister</span>
+</label>
+<label class="option">
+<input class="correct" name="q142" type="radio"/>
+<span>B) The Governor-General</span>
+</label>
+<label class="option">
+<input class="wrong" name="q142" type="radio"/>
+<span>C) The Premier</span>
+</label>
+<div class="feedback">Correct answer: B — The Governor-General represents the King federally.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>143. Which city is the capital of Tasmania?</h3>
+<label class="option">
+<input class="wrong" name="q143" type="radio"/>
+<span>A) Sydney</span>
+</label>
+<label class="option">
+<input class="correct" name="q143" type="radio"/>
+<span>B) Hobart</span>
+</label>
+<label class="option">
+<input class="wrong" name="q143" type="radio"/>
+<span>C) Perth</span>
+</label>
+<div class="feedback">Correct answer: C — Hobart is the capital of Tasmania.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>144. What is freedom of assembly?</h3>
+<label class="option">
+<input class="wrong" name="q144" type="radio"/>
+<span>A) People can threaten others</span>
+</label>
+<label class="option">
+<input class="wrong" name="q144" type="radio"/>
+<span>B) People can riot</span>
+</label>
+<label class="option">
+<input class="correct" name="q144" type="radio"/>
+<span>C) People can gather peacefully and lawfully</span>
+</label>
+<div class="feedback">Correct answer: B — Assembly must be peaceful and lawful.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>145. What is the Australian Constitution?</h3>
+<label class="option">
+<input class="correct" name="q145" type="radio"/>
+<span>A) The legal foundation of Australia’s system of government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q145" type="radio"/>
+<span>B) A local council policy</span>
+</label>
+<label class="option">
+<input class="wrong" name="q145" type="radio"/>
+<span>C) A list of tax rates</span>
+</label>
+<div class="feedback">Correct answer: A — The Constitution sets out Australia’s system of government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>146. Which star is on the Australian flag under the Union Jack?</h3>
+<label class="option">
+<input class="wrong" name="q146" type="radio"/>
+<span>A) Southern Star only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q146" type="radio"/>
+<span>B) Golden Star</span>
+</label>
+<label class="option">
+<input class="correct" name="q146" type="radio"/>
+<span>C) Commonwealth Star</span>
+</label>
+<div class="feedback">Correct answer: C — The Commonwealth Star is on the Australian flag.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>147. What does equality of opportunity mean?</h3>
+<label class="option">
+<input class="wrong" name="q147" type="radio"/>
+<span>A) Everyone is guaranteed the same job</span>
+</label>
+<label class="option">
+<input class="correct" name="q147" type="radio"/>
+<span>B) People should have a fair chance</span>
+</label>
+<label class="option">
+<input class="wrong" name="q147" type="radio"/>
+<span>C) Only citizens can work</span>
+</label>
+<div class="feedback">Correct answer: C — Equality of opportunity means fair chances.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>148. What was formed in 1901?</h3>
+<label class="option">
+<input class="correct" name="q148" type="radio"/>
+<span>A) The Commonwealth of Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q148" type="radio"/>
+<span>B) The Australian Empire</span>
+</label>
+<label class="option">
+<input class="wrong" name="q148" type="radio"/>
+<span>C) The Republic of Australia</span>
+</label>
+<div class="feedback">Correct answer: A — The Commonwealth of Australia was formed in 1901.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>149. What does the Commonwealth Star represent?</h3>
+<label class="option">
+<input class="wrong" name="q149" type="radio"/>
+<span>A) Only the courts</span>
+</label>
+<label class="option">
+<input class="wrong" name="q149" type="radio"/>
+<span>B) Only Canberra</span>
+</label>
+<label class="option">
+<input class="correct" name="q149" type="radio"/>
+<span>C) The states and territories of Australia</span>
+</label>
+<div class="feedback">Correct answer: B — The Commonwealth Star represents the unity of the states and territories.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>150. Which continent is Australia part of?</h3>
+<label class="option">
+<input class="correct" name="q150" type="radio"/>
+<span>A) Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q150" type="radio"/>
+<span>B) Europe</span>
+</label>
+<label class="option">
+<input class="wrong" name="q150" type="radio"/>
+<span>C) Asia</span>
+</label>
+<div class="feedback">Correct answer: C — Australia is a country and a continent.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>151. Can Australian citizens stand for Parliament if eligible?</h3>
+<label class="option">
+<input class="wrong" name="q151" type="radio"/>
+<span>A) No</span>
+</label>
+<label class="option">
+<input class="correct" name="q151" type="radio"/>
+<span>B) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q151" type="radio"/>
+<span>C) Only people born in Australia</span>
+</label>
+<div class="feedback">Correct answer: C — Eligible citizens can stand for election.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>152. Which is a responsibility?</h3>
+<label class="option">
+<input class="wrong" name="q152" type="radio"/>
+<span>A) Owning property</span>
+</label>
+<label class="option">
+<input class="correct" name="q152" type="radio"/>
+<span>B) Voting when required</span>
+</label>
+<label class="option">
+<input class="wrong" name="q152" type="radio"/>
+<span>C) Choosing any job without rules</span>
+</label>
+<div class="feedback">Correct answer: B — Voting is a responsibility.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>153. Which action supports democracy?</h3>
+<label class="option">
+<input class="wrong" name="q153" type="radio"/>
+<span>A) Refusing lawful jury service</span>
+</label>
+<label class="option">
+<input class="correct" name="q153" type="radio"/>
+<span>B) Voting in elections</span>
+</label>
+<label class="option">
+<input class="wrong" name="q153" type="radio"/>
+<span>C) Threatening voters</span>
+</label>
+<div class="feedback">Correct answer: C — Voting supports democracy.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>154. What is one way citizens can serve Australia?</h3>
+<label class="option">
+<input class="wrong" name="q154" type="radio"/>
+<span>A) Avoid voting</span>
+</label>
+<label class="option">
+<input class="correct" name="q154" type="radio"/>
+<span>B) Defend Australia if required</span>
+</label>
+<label class="option">
+<input class="wrong" name="q154" type="radio"/>
+<span>C) Ignore laws</span>
+</label>
+<div class="feedback">Correct answer: B — Citizens may have duties to Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>155. Who must obey Australian laws?</h3>
+<label class="option">
+<input class="wrong" name="q155" type="radio"/>
+<span>A) Only citizens</span>
+</label>
+<label class="option">
+<input class="wrong" name="q155" type="radio"/>
+<span>B) Only adults</span>
+</label>
+<label class="option">
+<input class="correct" name="q155" type="radio"/>
+<span>C) Everyone in Australia</span>
+</label>
+<div class="feedback">Correct answer: C — Everyone in Australia must obey Australian laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>156. What is separation of powers?</h3>
+<label class="option">
+<input class="wrong" name="q156" type="radio"/>
+<span>A) Giving all power to one person</span>
+</label>
+<label class="option">
+<input class="correct" name="q156" type="radio"/>
+<span>B) Dividing government powers among different arms</span>
+</label>
+<label class="option">
+<input class="wrong" name="q156" type="radio"/>
+<span>C) Removing courts</span>
+</label>
+<div class="feedback">Correct answer: B — Separation of powers divides power.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>157. Which level mainly handles hospitals?</h3>
+<label class="option">
+<input class="correct" name="q157" type="radio"/>
+<span>A) State and territory governments</span>
+</label>
+<label class="option">
+<input class="wrong" name="q157" type="radio"/>
+<span>B) The King</span>
+</label>
+<label class="option">
+<input class="wrong" name="q157" type="radio"/>
+<span>C) Local councils</span>
+</label>
+<div class="feedback">Correct answer: C — Hospitals are mainly state/territory.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>158. What is a political party?</h3>
+<label class="option">
+<input class="wrong" name="q158" type="radio"/>
+<span>A) A court</span>
+</label>
+<label class="option">
+<input class="correct" name="q158" type="radio"/>
+<span>B) A group of people with shared political ideas</span>
+</label>
+<label class="option">
+<input class="wrong" name="q158" type="radio"/>
+<span>C) A government tax</span>
+</label>
+<div class="feedback">Correct answer: A — Political parties contest elections.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>159. When did the colonies unite as one nation?</h3>
+<label class="option">
+<input class="wrong" name="q159" type="radio"/>
+<span>A) 2001</span>
+</label>
+<label class="option">
+<input class="wrong" name="q159" type="radio"/>
+<span>B) 1788</span>
+</label>
+<label class="option">
+<input class="correct" name="q159" type="radio"/>
+<span>C) 1901</span>
+</label>
+<div class="feedback">Correct answer: A — The colonies united in 1901.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>160. Which level of government handles defence?</h3>
+<label class="option">
+<input class="wrong" name="q160" type="radio"/>
+<span>A) State government</span>
+</label>
+<label class="option">
+<input class="correct" name="q160" type="radio"/>
+<span>B) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q160" type="radio"/>
+<span>C) Local government</span>
+</label>
+<div class="feedback">Correct answer: A — Defence is federal.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>161. Can people be discriminated against because of gender?</h3>
+<label class="option">
+<input class="correct" name="q161" type="radio"/>
+<span>A) No</span>
+</label>
+<label class="option">
+<input class="wrong" name="q161" type="radio"/>
+<span>B) Yes</span>
+</label>
+<label class="option">
+<input class="wrong" name="q161" type="radio"/>
+<span>C) Only at work</span>
+</label>
+<div class="feedback">Correct answer: C — Gender discrimination is not acceptable.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>162. Which is not acceptable in a democracy?</h3>
+<label class="option">
+<input class="correct" name="q162" type="radio"/>
+<span>A) Violence to force beliefs</span>
+</label>
+<label class="option">
+<input class="wrong" name="q162" type="radio"/>
+<span>B) Voting</span>
+</label>
+<label class="option">
+<input class="wrong" name="q162" type="radio"/>
+<span>C) Peaceful debate</span>
+</label>
+<div class="feedback">Correct answer: B — Violence is not acceptable.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>163. Which symbol is used by the Australian Government?</h3>
+<label class="option">
+<input class="wrong" name="q163" type="radio"/>
+<span>A) Only the Sydney Opera House</span>
+</label>
+<label class="option">
+<input class="wrong" name="q163" type="radio"/>
+<span>B) Only the kangaroo</span>
+</label>
+<label class="option">
+<input class="correct" name="q163" type="radio"/>
+<span>C) Commonwealth Coat of Arms</span>
+</label>
+<div class="feedback">Correct answer: C — The Coat of Arms is an official government symbol.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>164. What is a responsibility if called for jury service?</h3>
+<label class="option">
+<input class="wrong" name="q164" type="radio"/>
+<span>A) Ignore it</span>
+</label>
+<label class="option">
+<input class="wrong" name="q164" type="radio"/>
+<span>B) Send a friend instead</span>
+</label>
+<label class="option">
+<input class="correct" name="q164" type="radio"/>
+<span>C) Attend unless legally excused</span>
+</label>
+<div class="feedback">Correct answer: A — Jury service is a citizen responsibility.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>165. What is the Opposition?</h3>
+<label class="option">
+<input class="wrong" name="q165" type="radio"/>
+<span>A) The High Court</span>
+</label>
+<label class="option">
+<input class="correct" name="q165" type="radio"/>
+<span>B) The largest party or coalition not in government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q165" type="radio"/>
+<span>C) The police force</span>
+</label>
+<div class="feedback">Correct answer: A — The Opposition is not in government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>166. What does living peacefully mean in Australia?</h3>
+<label class="option">
+<input class="correct" name="q166" type="radio"/>
+<span>A) Resolving disagreements without violence</span>
+</label>
+<label class="option">
+<input class="wrong" name="q166" type="radio"/>
+<span>B) Using force to win arguments</span>
+</label>
+<label class="option">
+<input class="wrong" name="q166" type="radio"/>
+<span>C) Ignoring other people’s rights</span>
+</label>
+<div class="feedback">Correct answer: A — Australians are expected to live peacefully.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>167. Why is English important in Australia?</h3>
+<label class="option">
+<input class="wrong" name="q167" type="radio"/>
+<span>A) It replaces all cultures</span>
+</label>
+<label class="option">
+<input class="correct" name="q167" type="radio"/>
+<span>B) It helps people participate in Australian society</span>
+</label>
+<label class="option">
+<input class="wrong" name="q167" type="radio"/>
+<span>C) It removes the need for laws</span>
+</label>
+<div class="feedback">Correct answer: A — English helps people participate in Australian life.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>168. Which symbol includes a seven-pointed Commonwealth Star?</h3>
+<label class="option">
+<input class="wrong" name="q168" type="radio"/>
+<span>A) Only the Golden Wattle</span>
+</label>
+<label class="option">
+<input class="correct" name="q168" type="radio"/>
+<span>B) Australian National Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q168" type="radio"/>
+<span>C) Only the national anthem</span>
+</label>
+<div class="feedback">Correct answer: A — The Australian flag includes the Commonwealth Star.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>169. What are Australia’s national colours?</h3>
+<label class="option">
+<input class="correct" name="q169" type="radio"/>
+<span>A) Green and gold</span>
+</label>
+<label class="option">
+<input class="wrong" name="q169" type="radio"/>
+<span>B) Red and white</span>
+</label>
+<label class="option">
+<input class="wrong" name="q169" type="radio"/>
+<span>C) Blue and black</span>
+</label>
+<div class="feedback">Correct answer: C — Australia’s national colours are green and gold.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>170. What does the executive do?</h3>
+<label class="option">
+<input class="correct" name="q170" type="radio"/>
+<span>A) Administers and carries out laws</span>
+</label>
+<label class="option">
+<input class="wrong" name="q170" type="radio"/>
+<span>B) Writes only poems</span>
+</label>
+<label class="option">
+<input class="wrong" name="q170" type="radio"/>
+<span>C) Interprets court cases</span>
+</label>
+<div class="feedback">Correct answer: A — The executive administers and carries out laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>171. Which answer is an arm of government?</h3>
+<label class="option">
+<input class="wrong" name="q171" type="radio"/>
+<span>A) State</span>
+</label>
+<label class="option">
+<input class="wrong" name="q171" type="radio"/>
+<span>B) Federal</span>
+</label>
+<label class="option">
+<input class="correct" name="q171" type="radio"/>
+<span>C) Judicial</span>
+</label>
+<div class="feedback">Correct answer: C — Judicial is an arm of government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>172. Why is Anzac Day important?</h3>
+<label class="option">
+<input class="wrong" name="q172" type="radio"/>
+<span>A) It changes the Constitution</span>
+</label>
+<label class="option">
+<input class="wrong" name="q172" type="radio"/>
+<span>B) It celebrates local councils</span>
+</label>
+<label class="option">
+<input class="correct" name="q172" type="radio"/>
+<span>C) It honours service and sacrifice</span>
+</label>
+<div class="feedback">Correct answer: A — Anzac Day honours service and sacrifice.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>173. What do we commemorate on Anzac Day?</h3>
+<label class="option">
+<input class="correct" name="q173" type="radio"/>
+<span>A) Service and sacrifice of Australians in wars and conflicts</span>
+</label>
+<label class="option">
+<input class="wrong" name="q173" type="radio"/>
+<span>B) The first Parliament sitting</span>
+</label>
+<label class="option">
+<input class="wrong" name="q173" type="radio"/>
+<span>C) The signing of a peace treaty only</span>
+</label>
+<div class="feedback">Correct answer: A — Anzac Day commemorates service and sacrifice.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>174. What does the Commonwealth Coat of Arms identify?</h3>
+<label class="option">
+<input class="correct" name="q174" type="radio"/>
+<span>A) Commonwealth Government property</span>
+</label>
+<label class="option">
+<input class="wrong" name="q174" type="radio"/>
+<span>B) Private businesses</span>
+</label>
+<label class="option">
+<input class="wrong" name="q174" type="radio"/>
+<span>C) Only local council property</span>
+</label>
+<div class="feedback">Correct answer: B — The Coat of Arms identifies Commonwealth Government property.</div>
+</div>
+<div class="question">
+<div class="tag">Exam trap wording — mixed review</div>
+<h3>175. Which is a national day, not a level of government?</h3>
+<label class="option">
+<input class="wrong" name="q175" type="radio"/>
+<span>A) Federal</span>
+</label>
+<label class="option">
+<input class="wrong" name="q175" type="radio"/>
+<span>B) Local</span>
+</label>
+<label class="option">
+<input class="correct" name="q175" type="radio"/>
+<span>C) Anzac Day</span>
+</label>
+<div class="feedback">Correct answer: C — Anzac Day is a national day.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>176. Can people be discriminated against because of religion?</h3>
+<label class="option">
+<input class="correct" name="q176" type="radio"/>
+<span>A) No</span>
+</label>
+<label class="option">
+<input class="wrong" name="q176" type="radio"/>
+<span>B) Only in schools</span>
+</label>
+<label class="option">
+<input class="wrong" name="q176" type="radio"/>
+<span>C) Yes</span>
+</label>
+<div class="feedback">Correct answer: C — Religious discrimination is not acceptable.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>177. Which government is responsible for marriage and divorce laws?</h3>
+<label class="option">
+<input class="wrong" name="q177" type="radio"/>
+<span>A) Local government</span>
+</label>
+<label class="option">
+<input class="correct" name="q177" type="radio"/>
+<span>B) Federal government</span>
+</label>
+<label class="option">
+<input class="wrong" name="q177" type="radio"/>
+<span>C) State park authority</span>
+</label>
+<div class="feedback">Correct answer: C — Marriage and divorce laws are federal.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>178. Which is a state of Australia?</h3>
+<label class="option">
+<input class="wrong" name="q178" type="radio"/>
+<span>A) Auckland</span>
+</label>
+<label class="option">
+<input class="correct" name="q178" type="radio"/>
+<span>B) Tasmania</span>
+</label>
+<label class="option">
+<input class="wrong" name="q178" type="radio"/>
+<span>C) Wellington</span>
+</label>
+<div class="feedback">Correct answer: A — Tasmania is an Australian state.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>179. What did the colonies become after Federation?</h3>
+<label class="option">
+<input class="wrong" name="q179" type="radio"/>
+<span>A) Local councils only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q179" type="radio"/>
+<span>B) Separate foreign countries</span>
+</label>
+<label class="option">
+<input class="correct" name="q179" type="radio"/>
+<span>C) States of the Commonwealth of Australia</span>
+</label>
+<div class="feedback">Correct answer: B — The former colonies became states.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>180. What is one privilege of citizenship?</h3>
+<label class="option">
+<input class="wrong" name="q180" type="radio"/>
+<span>A) Ignoring the law</span>
+</label>
+<label class="option">
+<input class="correct" name="q180" type="radio"/>
+<span>B) Voting and seeking election if eligible</span>
+</label>
+<label class="option">
+<input class="wrong" name="q180" type="radio"/>
+<span>C) Avoiding jury service forever</span>
+</label>
+<div class="feedback">Correct answer: C — Citizenship gives civic privileges.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>181. What does voting let citizens do?</h3>
+<label class="option">
+<input class="wrong" name="q181" type="radio"/>
+<span>A) Choose judges directly in every court</span>
+</label>
+<label class="option">
+<input class="wrong" name="q181" type="radio"/>
+<span>B) Cancel laws alone</span>
+</label>
+<label class="option">
+<input class="correct" name="q181" type="radio"/>
+<span>C) Choose representatives</span>
+</label>
+<div class="feedback">Correct answer: A — Voting lets citizens choose representatives.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>182. Which is not a level of government?</h3>
+<label class="option">
+<input class="wrong" name="q182" type="radio"/>
+<span>A) Federal</span>
+</label>
+<label class="option">
+<input class="correct" name="q182" type="radio"/>
+<span>B) Judicial</span>
+</label>
+<label class="option">
+<input class="wrong" name="q182" type="radio"/>
+<span>C) Local</span>
+</label>
+<div class="feedback">Correct answer: A — Judicial is an arm, not a level.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>183. What is a responsibility of citizens aged 18 or over?</h3>
+<label class="option">
+<input class="correct" name="q183" type="radio"/>
+<span>A) Vote in elections</span>
+</label>
+<label class="option">
+<input class="wrong" name="q183" type="radio"/>
+<span>B) Join the army</span>
+</label>
+<label class="option">
+<input class="wrong" name="q183" type="radio"/>
+<span>C) Own a business</span>
+</label>
+<div class="feedback">Correct answer: A — Voting is compulsory for enrolled citizens aged 18+.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>184. Who is the head of the Australian Government?</h3>
+<label class="option">
+<input class="wrong" name="q184" type="radio"/>
+<span>A) The King</span>
+</label>
+<label class="option">
+<input class="wrong" name="q184" type="radio"/>
+<span>B) The Governor-General</span>
+</label>
+<label class="option">
+<input class="correct" name="q184" type="radio"/>
+<span>C) The Prime Minister</span>
+</label>
+<div class="feedback">Correct answer: A — The Prime Minister leads the Australian Government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and law</div>
+<h3>185. Which group is part of the executive arm?</h3>
+<label class="option">
+<input class="wrong" name="q185" type="radio"/>
+<span>A) Opposition only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q185" type="radio"/>
+<span>B) Juries only</span>
+</label>
+<label class="option">
+<input class="correct" name="q185" type="radio"/>
+<span>C) Government ministers and departments</span>
+</label>
+<div class="feedback">Correct answer: C — Executive carries out government administration.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>186. What is one duty of citizenship?</h3>
+<label class="option">
+<input class="correct" name="q186" type="radio"/>
+<span>A) Defend Australia should the need arise</span>
+</label>
+<label class="option">
+<input class="wrong" name="q186" type="radio"/>
+<span>B) Follow only personal customs</span>
+</label>
+<label class="option">
+<input class="wrong" name="q186" type="radio"/>
+<span>C) Never vote</span>
+</label>
+<div class="feedback">Correct answer: B — Citizens have responsibilities to Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>187. What is the white dancer’s headdress on the Torres Strait Islander flag called?</h3>
+<label class="option">
+<input class="wrong" name="q187" type="radio"/>
+<span>A) Boomerang</span>
+</label>
+<label class="option">
+<input class="correct" name="q187" type="radio"/>
+<span>B) Dhari</span>
+</label>
+<label class="option">
+<input class="wrong" name="q187" type="radio"/>
+<span>C) Commonwealth Star</span>
+</label>
+<div class="feedback">Correct answer: A — The white traditional dancer’s headdress is called a dhari.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>188. What does the dhari on the Torres Strait Islander flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q188" type="radio"/>
+<span>A) The Australian Parliament</span>
+</label>
+<label class="option">
+<input class="correct" name="q188" type="radio"/>
+<span>B) Torres Strait Islander people and culture</span>
+</label>
+<label class="option">
+<input class="wrong" name="q188" type="radio"/>
+<span>C) The five island groups</span>
+</label>
+<div class="feedback">Correct answer: B — The dhari represents Torres Strait Islander people and culture.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>189. Which symbol on the Torres Strait Islander flag represents peace?</h3>
+<label class="option">
+<input class="wrong" name="q189" type="radio"/>
+<span>A) The green panels</span>
+</label>
+<label class="option">
+<input class="correct" name="q189" type="radio"/>
+<span>B) The white five-pointed star</span>
+</label>
+<label class="option">
+<input class="wrong" name="q189" type="radio"/>
+<span>C) The dhari</span>
+</label>
+<div class="feedback">Correct answer: B — The white five-pointed star represents peace and the five major island groups.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>190. What does the white five-pointed star on the Torres Strait Islander flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q190" type="radio"/>
+<span>A) The states and territories</span>
+</label>
+<label class="option">
+<input class="correct" name="q190" type="radio"/>
+<span>B) Peace and the five major island groups</span>
+</label>
+<label class="option">
+<input class="wrong" name="q190" type="radio"/>
+<span>C) The High Court</span>
+</label>
+<div class="feedback">Correct answer: A — The white star represents peace and the five major island groups.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>191. What does the blue area on the Torres Strait Islander flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q191" type="radio"/>
+<span>A) The Parliament</span>
+</label>
+<label class="option">
+<input class="wrong" name="q191" type="radio"/>
+<span>B) The desert</span>
+</label>
+<label class="option">
+<input class="correct" name="q191" type="radio"/>
+<span>C) The sea</span>
+</label>
+<div class="feedback">Correct answer: A — Blue represents the sea.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>192. What does the green colour on the Torres Strait Islander flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q192" type="radio"/>
+<span>A) The courts</span>
+</label>
+<label class="option">
+<input class="correct" name="q192" type="radio"/>
+<span>B) The land</span>
+</label>
+<label class="option">
+<input class="wrong" name="q192" type="radio"/>
+<span>C) The sea</span>
+</label>
+<div class="feedback">Correct answer: A — Green represents the land.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>193. What do the black lines on the Torres Strait Islander flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q193" type="radio"/>
+<span>A) The police</span>
+</label>
+<label class="option">
+<input class="correct" name="q193" type="radio"/>
+<span>B) Torres Strait Islander people</span>
+</label>
+<label class="option">
+<input class="wrong" name="q193" type="radio"/>
+<span>C) The mainland states</span>
+</label>
+<div class="feedback">Correct answer: A — The black lines represent Torres Strait Islander people.</div>
+</div>
+<div class="question">
+<div class="tag">Exam trap wording — mixed review</div>
+<h3>194. On the Torres Strait Islander flag, which symbol is the dhari?</h3>
+<label class="option">
+<input class="wrong" name="q194" type="radio"/>
+<span>A) The blue sea panel</span>
+</label>
+<label class="option">
+<input class="correct" name="q194" type="radio"/>
+<span>B) The white traditional headdress</span>
+</label>
+<label class="option">
+<input class="wrong" name="q194" type="radio"/>
+<span>C) The five-pointed star</span>
+</label>
+<div class="feedback">Correct answer: A — The dhari is the white traditional Torres Strait Islander headdress.</div>
+</div>
+<div class="question">
+<div class="tag">Exam trap wording — mixed review</div>
+<h3>195. On the Torres Strait Islander flag, which symbol should you link with peace?</h3>
+<label class="option">
+<input class="wrong" name="q195" type="radio"/>
+<span>A) The black lines</span>
+</label>
+<label class="option">
+<input class="wrong" name="q195" type="radio"/>
+<span>B) The dhari</span>
+</label>
+<label class="option">
+<input class="correct" name="q195" type="radio"/>
+<span>C) The white five-pointed star</span>
+</label>
+<div class="feedback">Correct answer: C — The white star represents peace and the five major island groups.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>196. When did the separate colonies join together to become the Australian nation?</h3>
+<label class="option">
+<input class="wrong" name="q196" type="radio"/>
+<span>A) 1601</span>
+</label>
+<label class="option">
+<input class="wrong" name="q196" type="radio"/>
+<span>B) 2001</span>
+</label>
+<label class="option">
+<input class="correct" name="q196" type="radio"/>
+<span>C) 1901</span>
+</label>
+<div class="feedback">Correct answer: 1901 — Federation occurred on 1 January 1901.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>197. The Australian Constitution is a legal document that:</h3>
+<label class="option">
+<input class="wrong" name="q197" type="radio"/>
+<span>A) contains religious rules</span>
+</label>
+<label class="option">
+<input class="wrong" name="q197" type="radio"/>
+<span>B) can never be changed</span>
+</label>
+<label class="option">
+<input class="correct" name="q197" type="radio"/>
+<span>C) contains rules of government</span>
+</label>
+<div class="feedback">Correct answer: contains rules of government — The Constitution contains the rules for how Australia is governed.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>198. In Australia, the parliament:</h3>
+<label class="option">
+<input class="correct" name="q198" type="radio"/>
+<span>A) makes and changes the laws</span>
+</label>
+<label class="option">
+<input class="wrong" name="q198" type="radio"/>
+<span>B) is chosen by the Prime Minister</span>
+</label>
+<label class="option">
+<input class="wrong" name="q198" type="radio"/>
+<span>C) is controlled by judges</span>
+</label>
+<div class="feedback">Correct answer: makes and changes the laws — Parliament makes and changes Australian laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 4 — Australian values</div>
+<h3>199. Why is it important for people living in Australia to learn English?</h3>
+<label class="option">
+<input class="correct" name="q199" type="radio"/>
+<span>A) Speaking English helps people get an education and a job</span>
+</label>
+<label class="option">
+<input class="wrong" name="q199" type="radio"/>
+<span>B) Only native English speakers can become Australian citizens</span>
+</label>
+<label class="option">
+<input class="wrong" name="q199" type="radio"/>
+<span>C) English is the only language spoken in Australian communities</span>
+</label>
+<div class="feedback">Correct answer: Speaking English helps people get an education and a job — Learning English helps people participate fully in education, work and society.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>200. Which power includes the Australian Government ministers and the Governor-General?</h3>
+<label class="option">
+<input class="correct" name="q200" type="radio"/>
+<span>A) Executive power</span>
+</label>
+<label class="option">
+<input class="wrong" name="q200" type="radio"/>
+<span>B) Legislative power</span>
+</label>
+<label class="option">
+<input class="wrong" name="q200" type="radio"/>
+<span>C) Judicial power</span>
+</label>
+<div class="feedback">Correct answer: Executive power — Executive power includes the Prime Minister, ministers and the Governor-General who carry out the laws.</div>
+</div>
+<div class="question">
+<div class="tag">Part 4 — Australian values</div>
+<h3>201. How does freedom of speech work in Australia?</h3>
+<label class="option">
+<input class="wrong" name="q201" type="radio"/>
+<span>A) All people are unequal</span>
+</label>
+<label class="option">
+<input class="correct" name="q201" type="radio"/>
+<span>B) Australians can speak and write their opinions freely as long as they do not harm others</span>
+</label>
+<label class="option">
+<input class="wrong" name="q201" type="radio"/>
+<span>C) Religion is not allowed</span>
+</label>
+<div class="feedback">Correct answer: Australians can speak and write their opinions freely as long as they do not harm others — Freedom of speech allows Australians to express opinions within the law and without harming others.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>202. Which heritage has most influenced Australia’s history and political systems?</h3>
+<label class="option">
+<input class="correct" name="q202" type="radio"/>
+<span>A) British and Irish</span>
+</label>
+<label class="option">
+<input class="wrong" name="q202" type="radio"/>
+<span>B) British and Chinese</span>
+</label>
+<label class="option">
+<input class="wrong" name="q202" type="radio"/>
+<span>C) British and French</span>
+</label>
+<div class="feedback">Correct answer: British and Irish — British and Irish heritage strongly influenced Australia’s government, history and legal system.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>203. Does the King of Australia have a day-to-day role in governing the country?</h3>
+<label class="option">
+<input class="wrong" name="q203" type="radio"/>
+<span>A) Yes, he does</span>
+</label>
+<label class="option">
+<input class="wrong" name="q203" type="radio"/>
+<span>B) He has no role at all</span>
+</label>
+<label class="option">
+<input class="correct" name="q203" type="radio"/>
+<span>C) No, he does not</span>
+</label>
+<div class="feedback">Correct answer: No, he does not — The King is Head of State, but does not perform the day-to-day work of government.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>204. Which state has a rich wine-growing area in its south-west region?</h3>
+<label class="option">
+<input class="wrong" name="q204" type="radio"/>
+<span>A) South Australia</span>
+</label>
+<label class="option">
+<input class="correct" name="q204" type="radio"/>
+<span>B) Western Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q204" type="radio"/>
+<span>C) Queensland</span>
+</label>
+<div class="feedback">Correct answer: Western Australia — South-west Western Australia is famous for farming and wine-growing regions.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>205. According to Aboriginal legend, how did the opal gemstone get its colours?</h3>
+<label class="option">
+<input class="wrong" name="q205" type="radio"/>
+<span>A) A volcano erupted</span>
+</label>
+<label class="option">
+<input class="wrong" name="q205" type="radio"/>
+<span>B) A star fell</span>
+</label>
+<label class="option">
+<input class="correct" name="q205" type="radio"/>
+<span>C) A rainbow touched the earth</span>
+</label>
+<div class="feedback">Correct answer: A rainbow touched the earth — Aboriginal legend says a rainbow touched the earth and created the colours of the opal.</div>
+</div>
+<div class="question">
+<div class="tag">Part 4 — Australian values</div>
+<h3>206. What is a responsibility of an Australian citizen regarding national safety?</h3>
+<label class="option">
+<input class="correct" name="q206" type="radio"/>
+<span>A) Defend Australia if needed</span>
+</label>
+<label class="option">
+<input class="wrong" name="q206" type="radio"/>
+<span>B) Refuse jury duty</span>
+</label>
+<label class="option">
+<input class="wrong" name="q206" type="radio"/>
+<span>C) Do not defend the country</span>
+</label>
+<div class="feedback">Correct answer: Defend Australia if needed — Australian citizens should be willing to defend Australia if the need arises.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>207. Can Australian citizens register their children as citizens if they are born overseas?</h3>
+<label class="option">
+<input class="correct" name="q207" type="radio"/>
+<span>A) Yes, they can</span>
+</label>
+<label class="option">
+<input class="wrong" name="q207" type="radio"/>
+<span>B) No, they cannot</span>
+</label>
+<label class="option">
+<input class="wrong" name="q207" type="radio"/>
+<span>C) Only if born in NZ</span>
+</label>
+<div class="feedback">Correct answer: Yes, they can — Children born overseas to Australian citizens may be eligible for Australian citizenship.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>208. In which part of Australia can you find many unspoilt wilderness landscapes?</h3>
+<label class="option">
+<input class="wrong" name="q208" type="radio"/>
+<span>A) South Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q208" type="radio"/>
+<span>B) Queensland</span>
+</label>
+<label class="option">
+<input class="correct" name="q208" type="radio"/>
+<span>C) Tasmania</span>
+</label>
+<div class="feedback">Correct answer: Tasmania — Tasmania contains large areas of untouched wilderness.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>209. Who commanded the First Fleet during its voyage to Australia?</h3>
+<label class="option">
+<input class="wrong" name="q209" type="radio"/>
+<span>A) Captain James Cook</span>
+</label>
+<label class="option">
+<input class="correct" name="q209" type="radio"/>
+<span>B) Captain Arthur Phillip</span>
+</label>
+<label class="option">
+<input class="wrong" name="q209" type="radio"/>
+<span>C) Captain James Stirling</span>
+</label>
+<div class="feedback">Correct answer: Captain Arthur Phillip — Captain Arthur Phillip led the First Fleet and became the first Governor of New South Wales.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>210. Which document established the Parliament of the Commonwealth of Australia?</h3>
+<label class="option">
+<input class="wrong" name="q210" type="radio"/>
+<span>A) The British Constitution</span>
+</label>
+<label class="option">
+<input class="correct" name="q210" type="radio"/>
+<span>B) The Australian Constitution</span>
+</label>
+<label class="option">
+<input class="wrong" name="q210" type="radio"/>
+<span>C) The House of Representatives</span>
+</label>
+<div class="feedback">Correct answer: The Australian Constitution — The Australian Constitution created the federal Parliament, including the House and Senate.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>211. Where do the national colours of Australia (green and gold) come from?</h3>
+<label class="option">
+<input class="wrong" name="q211" type="radio"/>
+<span>A) The sun flower</span>
+</label>
+<label class="option">
+<input class="correct" name="q211" type="radio"/>
+<span>B) The golden wattle</span>
+</label>
+<label class="option">
+<input class="wrong" name="q211" type="radio"/>
+<span>C) The golden poppy</span>
+</label>
+<div class="feedback">Correct answer: The golden wattle — Australia’s national colours come from the golden wattle, the national floral emblem.</div>
+</div>
+<div class="question">
+<div class="tag">Part 4 — Australian values</div>
+<h3>212. What is the heritage religion of Australia?</h3>
+<label class="option">
+<input class="correct" name="q212" type="radio"/>
+<span>A) Judaeo-Christian</span>
+</label>
+<label class="option">
+<input class="wrong" name="q212" type="radio"/>
+<span>B) Protestant</span>
+</label>
+<label class="option">
+<input class="wrong" name="q212" type="radio"/>
+<span>C) Secular-only</span>
+</label>
+<div class="feedback">Correct answer: Judaeo-Christian — Australia has a Judaeo-Christian heritage while remaining a secular democracy.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>213. Where did workers discover gold in Australia in 1851?</h3>
+<label class="option">
+<input class="correct" name="q213" type="radio"/>
+<span>A) New South Wales and Victoria</span>
+</label>
+<label class="option">
+<input class="wrong" name="q213" type="radio"/>
+<span>B) Tasmania and South Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q213" type="radio"/>
+<span>C) Western Australia and Queensland</span>
+</label>
+<div class="feedback">Correct answer: New South Wales and Victoria — Gold was discovered in New South Wales and Victoria in 1851, beginning the gold rush.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>214. Which of these is NOT considered a national icon of Australia?</h3>
+<label class="option">
+<input class="correct" name="q214" type="radio"/>
+<span>A) Sydney's City area</span>
+</label>
+<label class="option">
+<input class="wrong" name="q214" type="radio"/>
+<span>B) Harbour Bridge</span>
+</label>
+<label class="option">
+<input class="wrong" name="q214" type="radio"/>
+<span>C) Opera House</span>
+</label>
+<div class="feedback">Correct answer: Sydney's City area — The Harbour Bridge and Opera House are Australian icons, but the general city area is not.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>215. Who is the current Head of State of Australia?</h3>
+<label class="option">
+<input class="wrong" name="q215" type="radio"/>
+<span>A) Queen Elizabeth II</span>
+</label>
+<label class="option">
+<input class="correct" name="q215" type="radio"/>
+<span>B) King Charles III</span>
+</label>
+<label class="option">
+<input class="wrong" name="q215" type="radio"/>
+<span>C) Queen Victoria</span>
+</label>
+<div class="feedback">Correct answer: King Charles III — King Charles III is the King of Australia and the official Head of State.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>216. What does the acronym ATO stand for?</h3>
+<label class="option">
+<input class="wrong" name="q216" type="radio"/>
+<span>A) Australian Travel Office</span>
+</label>
+<label class="option">
+<input class="correct" name="q216" type="radio"/>
+<span>B) Australian Taxation Office</span>
+</label>
+<label class="option">
+<input class="wrong" name="q216" type="radio"/>
+<span>C) Australian Time Office</span>
+</label>
+<div class="feedback">Correct answer: Australian Taxation Office — The Australian Taxation Office (ATO) collects taxes in Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>217. How many total Senators do the two mainland territories elect?</h3>
+<label class="option">
+<input class="correct" name="q217" type="radio"/>
+<span>A) 4</span>
+</label>
+<label class="option">
+<input class="wrong" name="q217" type="radio"/>
+<span>B) 12</span>
+</label>
+<label class="option">
+<input class="wrong" name="q217" type="radio"/>
+<span>C) 6</span>
+</label>
+<div class="feedback">Correct answer: 4 — The two mainland territories each elect two Senators, making four total.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>218. Which agency conducts federal elections and referendums in Australia?</h3>
+<label class="option">
+<input class="wrong" name="q218" type="radio"/>
+<span>A) The Australian Education Commission</span>
+</label>
+<label class="option">
+<input class="wrong" name="q218" type="radio"/>
+<span>B) The Australian Energy Commission</span>
+</label>
+<label class="option">
+<input class="correct" name="q218" type="radio"/>
+<span>C) The Australian Electoral Commission</span>
+</label>
+<div class="feedback">Correct answer: The Australian Electoral Commission — The Australian Electoral Commission (AEC) manages elections and the electoral roll.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>219. To which empire did the six separate Australian colonies belong before 1901?</h3>
+<label class="option">
+<input class="correct" name="q219" type="radio"/>
+<span>A) British</span>
+</label>
+<label class="option">
+<input class="wrong" name="q219" type="radio"/>
+<span>B) Spanish</span>
+</label>
+<label class="option">
+<input class="wrong" name="q219" type="radio"/>
+<span>C) French</span>
+</label>
+<div class="feedback">Correct answer: British — Before Federation in 1901, Australia consisted of six self-governing British colonies.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>220. In which year did European settlement begin in Australia?</h3>
+<label class="option">
+<input class="correct" name="q220" type="radio"/>
+<span>A) 1788</span>
+</label>
+<label class="option">
+<input class="wrong" name="q220" type="radio"/>
+<span>B) 1688</span>
+</label>
+<label class="option">
+<input class="wrong" name="q220" type="radio"/>
+<span>C) 1878</span>
+</label>
+<div class="feedback">Correct answer: 1788 — European settlement began when the First Fleet arrived on 26 January 1788.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>221. From which areas do Aboriginal people historically originate?</h3>
+<label class="option">
+<input class="wrong" name="q221" type="radio"/>
+<span>A) Britain and Tasmania</span>
+</label>
+<label class="option">
+<input class="correct" name="q221" type="radio"/>
+<span>B) Mainland Australia and Tasmania</span>
+</label>
+<label class="option">
+<input class="wrong" name="q221" type="radio"/>
+<span>C) Europe</span>
+</label>
+<div class="feedback">Correct answer: Mainland Australia and Tasmania — Aboriginal peoples historically come from mainland Australia and Tasmania.</div>
+</div>
+<div class="question">
+<div class="tag">Part 4 — Australian values</div>
+<h3>222. How does the 'spirit of mateship' influence many Australians?</h3>
+<label class="option">
+<input class="wrong" name="q222" type="radio"/>
+<span>A) Avoiding social contact</span>
+</label>
+<label class="option">
+<input class="wrong" name="q222" type="radio"/>
+<span>B) Fighting with neighbors</span>
+</label>
+<label class="option">
+<input class="correct" name="q222" type="radio"/>
+<span>C) Voluntary community work</span>
+</label>
+<div class="feedback">Correct answer: Voluntary community work — The spirit of mateship encourages helping others and volunteering.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>223. What is another common name for the House of Representatives?</h3>
+<label class="option">
+<input class="correct" name="q223" type="radio"/>
+<span>A) People's House</span>
+</label>
+<label class="option">
+<input class="wrong" name="q223" type="radio"/>
+<span>B) Upper House</span>
+</label>
+<label class="option">
+<input class="wrong" name="q223" type="radio"/>
+<span>C) House of Senate</span>
+</label>
+<div class="feedback">Correct answer: People's House — The House of Representatives is often called the People's House or Lower House.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>224. Which city is the largest in Australia?</h3>
+<label class="option">
+<input class="correct" name="q224" type="radio"/>
+<span>A) Sydney</span>
+</label>
+<label class="option">
+<input class="wrong" name="q224" type="radio"/>
+<span>B) Adelaide</span>
+</label>
+<label class="option">
+<input class="wrong" name="q224" type="radio"/>
+<span>C) Melbourne</span>
+</label>
+<div class="feedback">Correct answer: Sydney — Sydney is the largest city in Australia.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>225. Which animal is featured on the Commonwealth Coat of Arms?</h3>
+<label class="option">
+<input class="correct" name="q225" type="radio"/>
+<span>A) The Kangaroo</span>
+</label>
+<label class="option">
+<input class="wrong" name="q225" type="radio"/>
+<span>B) The Platypus</span>
+</label>
+<label class="option">
+<input class="wrong" name="q225" type="radio"/>
+<span>C) The Koala</span>
+</label>
+<div class="feedback">Correct answer: The Kangaroo — the Commonwealth Coat of Arms features a kangaroo and an emu.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>226. What is the role of the High Court of Australia?</h3>
+<label class="option">
+<input class="correct" name="q226" type="radio"/>
+<span>A) To interpret and apply the Constitution</span>
+</label>
+<label class="option">
+<input class="wrong" name="q226" type="radio"/>
+<span>B) To manage the Australian Taxation Office</span>
+</label>
+<label class="option">
+<input class="wrong" name="q226" type="radio"/>
+<span>C) To create new laws for the states</span>
+</label>
+<div class="feedback">Correct answer: To interpret and apply the Constitution.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>227. How many states are there in Australia?</h3>
+<label class="option">
+<input class="correct" name="q227" type="radio"/>
+<span>A) 6</span>
+</label>
+<label class="option">
+<input class="wrong" name="q227" type="radio"/>
+<span>B) 8</span>
+</label>
+<label class="option">
+<input class="wrong" name="q227" type="radio"/>
+<span>C) 5</span>
+</label>
+<div class="feedback">Correct answer: 6 — Australia has six states.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>228. What is the role of the Cabinet in Australian government?</h3>
+<label class="option">
+<input class="correct" name="q228" type="radio"/>
+<span>A) To make key decisions about government policy</span>
+</label>
+<label class="option">
+<input class="wrong" name="q228" type="radio"/>
+<span>B) To write the laws for local councils</span>
+</label>
+<label class="option">
+<input class="wrong" name="q228" type="radio"/>
+<span>C) To choose the members of the High Court</span>
+</label>
+<div class="feedback">Correct answer: To make key decisions about government policy.</div>
+</div>
+<div class="question">
+<div class="tag">Part 1 — Australia and its people</div>
+<h3>229. Which of these is a famous Australian landmark?</h3>
+<label class="option">
+<input class="wrong" name="q229" type="radio"/>
+<span>A) The Grand Canyon</span>
+</label>
+<label class="option">
+<input class="wrong" name="q229" type="radio"/>
+<span>B) The Great Wall</span>
+</label>
+<label class="option">
+<input class="correct" name="q229" type="radio"/>
+<span>C) The Uluru-Kata Tjuta National Park</span>
+</label>
+<div class="feedback">Correct answer: The Uluru-Kata Tjuta National Park.</div>
+</div>
+<div class="question">
+<div class="tag">Part 2 — Democratic beliefs, rights and liberties</div>
+<h3>230. What does Freedom of Association mean in Australia?</h3>
+<label class="option">
+<input class="wrong" name="q230" type="radio"/>
+<span>A) People must join a trade union to work</span>
+</label>
+<label class="option">
+<input class="correct" name="q230" type="radio"/>
+<span>B) People are free to join or leave any group voluntarily</span>
+</label>
+<label class="option">
+<input class="wrong" name="q230" type="radio"/>
+<span>C) People can only join groups approved by the government</span>
+</label>
+<div class="feedback">Correct answer: People are free to join or leave groups voluntarily.</div>
+</div>
+<div class="question">
+<div class="tag">Part 3 — Government and the law in Australia</div>
+<h3>231. What is Australia's system of government?</h3>
+<label class="option">
+<input class="correct" name="q231" type="radio"/>
+<span>A) Parliamentary Democracy</span>
+</label>
+<label class="option">
+<input class="wrong" name="q231" type="radio"/>
+<span>B) Socialist Republic</span>
+</label>
+<label class="option">
+<input class="wrong" name="q231" type="radio"/>
+<span>C) Democratic Monarchy</span>
+</label>
+<div class="feedback">Correct answer: Parliamentary Democracy.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>232. Which flag has the Union Jack, the Commonwealth Star and the Southern Cross?</h3>
+<label class="option">
+<input class="wrong" name="q232" type="radio"/>
+<span>A) Torres Strait Islander Flag</span>
+</label>
+<label class="option">
+<input class="correct" name="q232" type="radio"/>
+<span>B) Australian National Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q232" type="radio"/>
+<span>C) Aboriginal Flag</span>
+</label>
+<div class="feedback">Correct answer: Australian National Flag — it has the Union Jack, Commonwealth Star and Southern Cross.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>233. What does the Union Jack on the Australian National Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q233" type="radio"/>
+<span>A) Australia's states only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q233" type="radio"/>
+<span>B) Australia's beaches</span>
+</label>
+<label class="option">
+<input class="correct" name="q233" type="radio"/>
+<span>C) Australia's British history</span>
+</label>
+<div class="feedback">Correct answer: Australia's British history.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>234. What does the Commonwealth Star on the Australian National Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q234" type="radio"/>
+<span>A) Only Queensland</span>
+</label>
+<label class="option">
+<input class="correct" name="q234" type="radio"/>
+<span>B) The states and territories of Australia</span>
+</label>
+<label class="option">
+<input class="wrong" name="q234" type="radio"/>
+<span>C) Only the Prime Minister</span>
+</label>
+<div class="feedback">Correct answer: The states and territories of Australia.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>235. What does the Southern Cross on the Australian National Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q235" type="radio"/>
+<span>A) A court symbol</span>
+</label>
+<label class="option">
+<input class="correct" name="q235" type="radio"/>
+<span>B) A constellation seen in the southern sky</span>
+</label>
+<label class="option">
+<input class="wrong" name="q235" type="radio"/>
+<span>C) A flower</span>
+</label>
+<div class="feedback">Correct answer: A constellation seen in the southern sky.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>236. Which flag represents Aboriginal peoples of Australia?</h3>
+<label class="option">
+<input class="correct" name="q236" type="radio"/>
+<span>A) Aboriginal Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q236" type="radio"/>
+<span>B) Torres Strait Islander Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q236" type="radio"/>
+<span>C) Australian National Flag only</span>
+</label>
+<div class="feedback">Correct answer: Aboriginal Flag.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>237. What are the colours of the Aboriginal Flag?</h3>
+<label class="option">
+<input class="correct" name="q237" type="radio"/>
+<span>A) Black, red and yellow</span>
+</label>
+<label class="option">
+<input class="wrong" name="q237" type="radio"/>
+<span>B) Blue, green and white</span>
+</label>
+<label class="option">
+<input class="wrong" name="q237" type="radio"/>
+<span>C) Red, white and blue</span>
+</label>
+<div class="feedback">Correct answer: Black, red and yellow.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>238. What does the black part of the Aboriginal Flag represent?</h3>
+<label class="option">
+<input class="correct" name="q238" type="radio"/>
+<span>A) Aboriginal peoples</span>
+</label>
+<label class="option">
+<input class="wrong" name="q238" type="radio"/>
+<span>B) The ocean</span>
+</label>
+<label class="option">
+<input class="wrong" name="q238" type="radio"/>
+<span>C) The courts</span>
+</label>
+<div class="feedback">Correct answer: Aboriginal peoples.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>239. What does the red part of the Aboriginal Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q239" type="radio"/>
+<span>A) The ocean</span>
+</label>
+<label class="option">
+<input class="wrong" name="q239" type="radio"/>
+<span>B) The Parliament</span>
+</label>
+<label class="option">
+<input class="correct" name="q239" type="radio"/>
+<span>C) The earth and spiritual connection to the land</span>
+</label>
+<div class="feedback">Correct answer: The earth and spiritual connection to the land.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>240. What does the yellow circle on the Aboriginal Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q240" type="radio"/>
+<span>A) The moon</span>
+</label>
+<label class="option">
+<input class="wrong" name="q240" type="radio"/>
+<span>B) A gold coin</span>
+</label>
+<label class="option">
+<input class="correct" name="q240" type="radio"/>
+<span>C) The sun</span>
+</label>
+<div class="feedback">Correct answer: The sun.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>241. Which flag represents Torres Strait Islander peoples?</h3>
+<label class="option">
+<input class="correct" name="q241" type="radio"/>
+<span>A) Torres Strait Islander Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q241" type="radio"/>
+<span>B) Aboriginal Flag only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q241" type="radio"/>
+<span>C) Australian National Flag only</span>
+</label>
+<div class="feedback">Correct answer: Torres Strait Islander Flag.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>242. What are the main colours of the Torres Strait Islander Flag?</h3>
+<label class="option">
+<input class="wrong" name="q242" type="radio"/>
+<span>A) Red, white and blue</span>
+</label>
+<label class="option">
+<input class="correct" name="q242" type="radio"/>
+<span>B) Green, blue, black and white</span>
+</label>
+<label class="option">
+<input class="wrong" name="q242" type="radio"/>
+<span>C) Black, red and yellow</span>
+</label>
+<div class="feedback">Correct answer: Green, blue, black and white.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>243. What does the green on the Torres Strait Islander Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q243" type="radio"/>
+<span>A) The courts</span>
+</label>
+<label class="option">
+<input class="wrong" name="q243" type="radio"/>
+<span>B) The sun</span>
+</label>
+<label class="option">
+<input class="correct" name="q243" type="radio"/>
+<span>C) The land</span>
+</label>
+<div class="feedback">Correct answer: The land.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>244. What does the blue on the Torres Strait Islander Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q244" type="radio"/>
+<span>A) The desert</span>
+</label>
+<label class="option">
+<input class="correct" name="q244" type="radio"/>
+<span>B) The sea</span>
+</label>
+<label class="option">
+<input class="wrong" name="q244" type="radio"/>
+<span>C) The Parliament</span>
+</label>
+<div class="feedback">Correct answer: The sea.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>245. What does the black on the Torres Strait Islander Flag represent?</h3>
+<label class="option">
+<input class="wrong" name="q245" type="radio"/>
+<span>A) The High Court</span>
+</label>
+<label class="option">
+<input class="correct" name="q245" type="radio"/>
+<span>B) Torres Strait Islander peoples</span>
+</label>
+<label class="option">
+<input class="wrong" name="q245" type="radio"/>
+<span>C) The night only</span>
+</label>
+<div class="feedback">Correct answer: Torres Strait Islander peoples.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>246. What is the white Dhari on the Torres Strait Islander Flag?</h3>
+<label class="option">
+<input class="correct" name="q246" type="radio"/>
+<span>A) A traditional Torres Strait Islander headdress</span>
+</label>
+<label class="option">
+<input class="wrong" name="q246" type="radio"/>
+<span>B) A peace dove</span>
+</label>
+<label class="option">
+<input class="wrong" name="q246" type="radio"/>
+<span>C) A court badge</span>
+</label>
+<div class="feedback">Correct answer: A traditional Torres Strait Islander headdress.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>247. Does the Dhari itself mean peace?</h3>
+<label class="option">
+<input class="wrong" name="q247" type="radio"/>
+<span>A) Yes, it is the main peace symbol</span>
+</label>
+<label class="option">
+<input class="wrong" name="q247" type="radio"/>
+<span>B) No, it means the High Court</span>
+</label>
+<label class="option">
+<input class="correct" name="q247" type="radio"/>
+<span>C) No, it is a traditional headdress</span>
+</label>
+<div class="feedback">Correct answer: No — the Dhari is a traditional headdress; the white colour symbolises peace.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>248. Which two flags represent Australia's First Peoples?</h3>
+<label class="option">
+<input class="correct" name="q248" type="radio"/>
+<span>A) Aboriginal Flag and Torres Strait Islander Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q248" type="radio"/>
+<span>B) United Nations Flag and State Flag</span>
+</label>
+<label class="option">
+<input class="wrong" name="q248" type="radio"/>
+<span>C) Australian National Flag and New Zealand Flag</span>
+</label>
+<div class="feedback">Correct answer: Aboriginal Flag and Torres Strait Islander Flag.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>249. Which animal is on the Commonwealth Coat of Arms together with the emu?</h3>
+<label class="option">
+<input class="wrong" name="q249" type="radio"/>
+<span>A) Platypus</span>
+</label>
+<label class="option">
+<input class="correct" name="q249" type="radio"/>
+<span>B) Kangaroo</span>
+</label>
+<label class="option">
+<input class="wrong" name="q249" type="radio"/>
+<span>C) Koala</span>
+</label>
+<div class="feedback">Correct answer: Kangaroo — the Coat of Arms has a kangaroo and an emu.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>250. Which two animals support the Commonwealth Coat of Arms?</h3>
+<label class="option">
+<input class="correct" name="q250" type="radio"/>
+<span>A) Kangaroo and emu</span>
+</label>
+<label class="option">
+<input class="wrong" name="q250" type="radio"/>
+<span>B) Dingo and crocodile</span>
+</label>
+<label class="option">
+<input class="wrong" name="q250" type="radio"/>
+<span>C) Koala and wombat</span>
+</label>
+<div class="feedback">Correct answer: Kangaroo and emu.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>251. What does the shield on the Commonwealth Coat of Arms show?</h3>
+<label class="option">
+<input class="wrong" name="q251" type="radio"/>
+<span>A) Only the High Court</span>
+</label>
+<label class="option">
+<input class="correct" name="q251" type="radio"/>
+<span>B) Symbols of the six states</span>
+</label>
+<label class="option">
+<input class="wrong" name="q251" type="radio"/>
+<span>C) Only the Prime Minister</span>
+</label>
+<div class="feedback">Correct answer: Symbols of the six states.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>252. What is Australia's national floral emblem?</h3>
+<label class="option">
+<input class="wrong" name="q252" type="radio"/>
+<span>A) Waratah only</span>
+</label>
+<label class="option">
+<input class="wrong" name="q252" type="radio"/>
+<span>B) Rose</span>
+</label>
+<label class="option">
+<input class="correct" name="q252" type="radio"/>
+<span>C) Golden Wattle</span>
+</label>
+<div class="feedback">Correct answer: Golden Wattle.</div>
+</div>
+<div class="question">
+<div class="tag">FLAGS &amp; SYMBOLS MASTER SECTION</div>
+<h3>253. Which symbol identifies Commonwealth Government property?</h3>
+<label class="option">
+<input class="wrong" name="q253" type="radio"/>
+<span>A) National anthem</span>
+</label>
+<label class="option">
+<input class="wrong" name="q253" type="radio"/>
+<span>B) Golden Wattle</span>
+</label>
+<label class="option">
+<input class="correct" name="q253" type="radio"/>
+<span>C) Commonwealth Coat of Arms</span>
+</label>
+<div class="feedback">Correct answer: Commonwealth Coat of Arms.</div>
+</div>
+
+</div>
+
+<script>
+let current = [];
+
+function shuffle(a){
+ for(let i=a.length-1;i>0;i--){
+   const j=Math.floor(Math.random()*(i+1));
+   [a[i],a[j]]=[a[j],a[i]];
+ }
+ return a;
+}
+
+function getQuestions(){
+ return Array.from(document.querySelectorAll('.question'));
+}
+
+document.getElementById('randomBtn').onclick = function(){
+ let qs=getQuestions();
+
+ qs.forEach(q=>{
+   q.style.display='none';
+   q.classList.remove('correct');
+   q.classList.remove('wrong');
+ });
+
+ current=shuffle(qs).slice(0,20);
+
+ current.forEach(q=>q.style.display='block');
+
+ document.getElementById('score').innerHTML='Random 20 loaded';
+}
+
+document.getElementById('showBtn').onclick = function(){
+ let qs=getQuestions();
+
+ qs.forEach(q=>{
+   q.style.display='block';
+   q.classList.remove('correct');
+   q.classList.remove('wrong');
+ });
+
+ current=[];
+
+ document.getElementById('score').innerHTML='Showing all questions';
+}
+
+document.getElementById('markBtn').onclick = function(){
+ let qs=current.length ? current : getQuestions();
+
+ let score=0;
+
+ qs.forEach(q=>{
+   q.classList.remove('correct');
+   q.classList.remove('wrong');
+
+   let selected=q.querySelector('input[type=radio]:checked');
+
+   if(selected && selected.classList.contains('correct')){
+      score++;
+      q.classList.add('correct');
+   } else {
+      q.classList.add('wrong');
+   }
+ });
+
+ document.getElementById('score').innerHTML='Score: '+score+' / '+qs.length;
+}
+</script>
+
+</body>
+</html>
